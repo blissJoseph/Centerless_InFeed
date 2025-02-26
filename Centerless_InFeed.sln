@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35514.174
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Centerless_InFeed", "Centerless_InFeed\Centerless_InFeed.csproj", "{22CC04B2-CEDC-4021-A956-8390A6A863D7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{A0950181-3EDC-41DA-8BB1-7B16F5267B98}"
+	ProjectSection(SolutionItems) = preProject
+		Images\HomeOFF.png = Images\HomeOFF.png
+		Images\LOGO.jpg = Images\LOGO.jpg
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Managers", "Managers", "{6EFD24F3-3848-413F-8D77-5C467D62C274}"
+	ProjectSection(SolutionItems) = preProject
+		ClockManager.cs = ClockManager.cs
+		ButtonManager.cs = ButtonManager.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Views", "Views", "{367263C3-3222-489C-9752-8E6C887BA558}"
+	ProjectSection(SolutionItems) = preProject
+		Centerless_InFeed\MainWindow.xaml = Centerless_InFeed\MainWindow.xaml
+		Centerless_InFeed\MainWindow.xaml.cs = Centerless_InFeed\MainWindow.xaml.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pages", "Pages", "{3A88F8A1-D5E2-4CBA-8A71-DA967B3833FD}"
+	ProjectSection(SolutionItems) = preProject
+		Centerless_InFeed\HOME.xaml = Centerless_InFeed\HOME.xaml
+		Centerless_InFeed\HOME.xaml.cs = Centerless_InFeed\HOME.xaml.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22CC04B2-CEDC-4021-A956-8390A6A863D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22CC04B2-CEDC-4021-A956-8390A6A863D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22CC04B2-CEDC-4021-A956-8390A6A863D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22CC04B2-CEDC-4021-A956-8390A6A863D7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
