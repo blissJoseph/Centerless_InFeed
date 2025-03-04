@@ -22,26 +22,168 @@
             <RowDefinition Height="100"/>
             <!-- Row 6 -->
         </Grid.RowDefinitions>
-        
+
+
         <!--Fist Row Content-->
         <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <!-- Image -->
             <Image Source="/LOGO.jpg" Width="340" Height="50" Margin="5" RenderTransformOrigin="1,1"/>
-            
+
             <!-- button -->
-            <Button Content="Button1" Width="60" Height="60" Margin="5" Canvas.Left="340" Canvas.Top="10" Click="Button_Click_1" />
-            <Button Content="Button2" Width="60" Height="60" Margin="5" Canvas.Left="370" Canvas.Top="30" Click="Button_Click_3" />
-            <Button Content="Button3" Width="60" Height="60" Margin="5" Canvas.Left="400" Canvas.Top="50" Click="Button_Click_2" />
+            <Button Content="Button1" Width="60" Height="60" Margin="10"  Canvas.Top="10" Click="Button_Click_1" />
+            <Button Content="Button2" Width="60" Height="60" Margin="10"  Canvas.Top="30" Click="Button_Click_3" />
+            <Button Content="Button3" Width="60" Height="60" Margin="10"  Canvas.Top="50" Click="Button_Click_2" />
+            <Button Content="Button3" Width="60" Height="60" Margin="10"  Canvas.Top="50" Click="Button_Click_2" />
 
             <!-- AM/PM Text -->
-            <TextBlock x:Name="AmPmTextBlcok" FontSize="14" 
-                       HorizontalAlignment="Right" Margin="0,5,20,0"/>
+            <TextBlock x:Name="AmPmTextBlcok" FontSize="14" Margin="0,5,20,0" Width="100"/>
             <!-- Date in dd/mm/yyyy format-->
             <TextBlock x:Name="DateTextBlock" FontSize="14" 
                        HorizontalAlignment="Right" Margin="0,5,20,0"/>
 
-
         </StackPanel>
+
+        <!--Second Row Content-->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="Machine Condition" Width="220" Height="50" Margin="0,0,40,0"/>
+            <Button Content=" " Width="220" Height="50" Margin="0,0,40,0"/>
+            <Button Content=" " Width="220" Height="50" Margin="0,0,40,0"/>
+            <Button Content="Job List" Width="220" Height="50"/>
+        </StackPanel>
+
+        <Grid Grid.Row="4">
+            <!-- Define 4 Columns -->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <!-- Mode -->
+                <ColumnDefinition Width="*"/>
+                <!-- Function -->
+                <ColumnDefinition Width="0.7*"/>
+                <!-- Coolant -->
+                <ColumnDefinition Width="*"/>
+                <!-- Axis -->
+            </Grid.ColumnDefinitions>
+
+            <!-- MODE Section -->
+            <StackPanel Grid.Column="0"  Margin="10">
+                <TextBlock Text="MODE" FontWeight="Bold" Background="Gray" Height="30" Foreground="White" Padding="5" TextAlignment="Center" Margin="1"/>
+                <UniformGrid Rows="4" Columns="3" Margin="5">
+                    <Button Content="AUTO" Width="60" Height="60"/>
+                    <Button Content="SBK" Width="60" Height="60" />
+                    <Button Content="HANDLE" Width="60" Height="60" Margin="5"/>
+                    <Button Content="MDA" Width="60" Height="60" Margin="5"/>
+                    <Button Content="OSP" Width="60" Height="60" Margin="5"/>
+                    <Button Content="JOG" Width="60" Height="60" Margin="5"/>
+                    <Button Content="EDIT" Width="60" Height="60" Margin="5"/>
+                    <Button Content=" " Width="60" Height="60" Margin="5" Background="DarkGray"/>
+                    <Button Content=" " Width="60" Height="60" Margin="5" Background="DarkGray"/>                  
+                    <Button Content="TEACH IN" Width="60" Height="60" Margin="5"/>
+                    <Button Content="DRN" Width="60" Height="60" Margin="5"/>
+                    <Button Content="REF" Width="60" Height="60" Margin="5"/>
+                </UniformGrid>
+            </StackPanel>
+
+            <!-- FUNCTION Section -->
+            <StackPanel Grid.Column="1" Margin="10">
+                <TextBlock Text="MODE" FontWeight="Bold" Background="Gray" Height="30" Foreground="White" Padding="5" TextAlignment="Center" Margin="1"/>
+                <UniformGrid Rows="4" Columns="3" Margin="5">
+                    <Button Content="AUTO" Width="60" Height="60" Click="Button_Click_4"/>
+                    <Button Content="SBK" Width="60" Height="60" />
+                    <Button Content="HANDLE" Width="60" Height="60" Margin="5"/>
+                    <Button Content="MDA" Width="60" Height="60" Margin="5"/>
+                    <Button Content="OSP" Width="60" Height="60" Margin="5"/>
+                    <Button Content="JOG" Width="60" Height="60" Margin="5"/>
+                    <Button Content="EDIT" Width="60" Height="60" Margin="5"/>
+                    <Button Content=" " Width="60" Height="60" Margin="5"/>
+                    <Button Content=" " Width="60" Height="60" Margin="5"/>
+                    <Button Content="TEACH IN" Width="60" Height="60" Margin="5"/>
+                    <Button Content="DRN" Width="60" Height="60" Margin="5"/>
+                    <Button Content="REF" Width="60" Height="60" Margin="5"/>
+                </UniformGrid>
+            </StackPanel>
+
+            <!-- COOLANT Section -->
+            <StackPanel Grid.Column="2" Margin="10" >
+                <TextBlock Text="COOLANT" FontWeight="Bold" Background="Gray" Height="30" Foreground="White" Padding="5" TextAlignment="Center" Margin="1"/>
+                <UniformGrid Rows="4" Columns="2" Margin="5">
+                    <Button Content="MANU" Width="60" Height="60" Margin="5"/>
+                    <Button Content="AUTO" Width="60" Height="60" Margin="5"/>
+                    <Button Content="G/W" Width="60" Height="60" Margin="5"/>
+                    <Button Content="R/W" Width="60" Height="60" Margin="5"/>
+                    <Button Content="DRS"  Width="60" Height="60" Margin="5"/>
+                    <Button Content="NO CLNT" Width="60" Height="60" Margin="5"/>
+                    <Button Content="NO CLNT" Width="60" Height="60" Margin="5"/>
+                    <Button Content="NO CLNT" Width="60" Height="60" Margin="5"/>
+                </UniformGrid>
+            </StackPanel>
+
+            <!-- AXIS Section -->
+            <StackPanel Grid.Column="3" Margin="10">
+                <TextBlock Text="MODE" FontWeight="Bold" Background="Gray" Height="30" Foreground="White" Padding="5" TextAlignment="Center" Margin="1"/>
+                <UniformGrid Rows="4" Columns="3" Margin="5">
+                    <Button Content="AUTO" Width="60" Height="60"/>
+                    <Button Content="SBK" Width="60" Height="60" />
+                    <Button Content="HANDLE" Width="60" Height="60" Margin="5"/>
+                    <Button Content="MDA" Width="60" Height="60" Margin="5"/>
+                    <Button Content="OSP" Width="60" Height="60" Margin="5"/>
+                    <Button Content="JOG" Width="60" Height="60" Margin="5"/>
+                    <Button Content="EDIT" Width="60" Height="60" Margin="5"/>
+                    <Button Content=" " Width="60" Height="60" Margin="5"/>
+                    <Button Content=" " Width="60" Height="60" Margin="5"/>
+                    <Button Content="TEACH IN" Width="60" Height="60" Margin="5"/>
+                    <Button Content="DRN" Width="60" Height="60" Margin="5"/>
+                    <Button Content="REF" Width="60" Height="60" Margin="5"/>
+                </UniformGrid>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="5">
+            <!-- Define 4 Columns -->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <!-- Mode -->
+                <ColumnDefinition Width="*"/>
+                <!-- Function -->
+                <ColumnDefinition Width="0.7*"/>
+                <!-- Coolant -->
+                <ColumnDefinition Width="*"/>
+                <!-- Axis -->
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" Margin="10">
+                <UniformGrid  Columns="3" Margin="5">
+                    <Button Content="AUTO" Width="60" Height="60"/>
+                    <Button Content="SBK" Width="60" Height="60" />
+                    <Button Content="HANDLE" Width="60" Height="60" Margin="5"/>
+                </UniformGrid>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" Margin="10">
+                <UniformGrid  Columns="3" Margin="5">
+                    <Button Content="AUTO" Width="60" Height="60"/>
+                    <Button Content="SBK" Width="60" Height="60" />
+                    <Button Content="HANDLE" Width="60" Height="60" Margin="5"/>
+                </UniformGrid>
+            </StackPanel>
+
+            <StackPanel Grid.Column="2" Margin="10">
+                <UniformGrid  Columns="2" Margin="5">
+                    <Button Content="AUTO" Width="60" Height="60"/>
+                    <Button Content="HANDLE" Width="60" Height="60" Margin="5"/>
+                </UniformGrid>
+            </StackPanel>
+
+            <StackPanel Grid.Column="3" Margin="10">
+                <UniformGrid  Columns="3" Margin="5">
+                    <Button Content="AUTO" Width="60" Height="60"/>
+                    <Button Content="SBK" Width="60" Height="60" />
+                    <Button Content="HANDLE" Width="60" Height="60" Margin="5"/>
+                </UniformGrid>
+            </StackPanel>
+
+        </Grid>
+
+
 
     </Grid>
 
