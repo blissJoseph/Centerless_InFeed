@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DialogGui>
+	<?include src="f:\appl\1_menu_Home.xml" ?>
+	<?include src="f:\appl\1.1_menu_Joblist.xml" ?>
+	<?include src="f:\appl\2_menu_Auto.xml" ?>
+	<?include src="f:\appl\3_menu_SemiAuto.xml" ?>
+	<?include src="f:\appl\4_menu_Manual.xml" ?>
+
+	<?include src="f:\appl\5.1_menu_Setting.xml" ?>
+	<?include src="f:\appl\5.2_menu_DressingData.xml" ?>
+	<?include src="f:\appl\5.3_menu_UtilityData.xml" ?>
+	<?include src="f:\appl\5.4_menu_TeachingData.xml" ?>
+
+	<?include src="f:\appl\6.1_menu_Maintenance.xml" ?>
+	<?include src="f:\appl\6.2_menu_CycleOperation.xml" ?>
+	<?include src="f:\appl\6.3_menu_SpindleParameter.xml" ?>
+
+	<menu name = "main">
+
+		<open_form name = "main_form" />
+			
+		<softkey POSITION="1" >
+			<caption>Home</caption>
+			<navigation>menu_home</navigation>
+		</softkey>
+
+		<softkey POSITION="2" >
+			<caption>Auto</caption>
+			<navigation>menu_Auto</navigation>
+		</softkey>
+
+		<softkey POSITION="3" >
+			<caption>SemiAuto</caption>
+			<navigation>menu_SemiAuto</navigation>
+		</softkey>
+
+		<softkey POSITION="4" >
+			<caption>Manual</caption>
+			<navigation>menu_Manual</navigation>
+		</softkey>
+
+		<softkey POSITION="5" >
+			<caption>Setting</caption>
+			<navigation>menu_Setting</navigation>
+		</softkey>
+
+		<softkey POSITION="6" >
+			<caption>Maintenance</caption>
+			<navigation>menu_Maintenance</navigation>
+		</softkey>
+
+		<softkey POSITION="9" >
+			<caption>menu_test9</caption>
+			<navigation>menu_test9</navigation>
+		</softkey>
+
+		<softkey POSITION="10" >
+			<caption>menu_test10</caption>
+			<navigation>menu_test10</navigation>
+		</softkey>
+
+		<softkey POSITION="12" >
+			<caption>JOB LIST</caption>
+			<navigation>menu_JobList</navigation>
+		</softkey>
+	</menu>
+
+	<form name = "main_form">
+		<init>
+			<caption>Custom screen examples</caption>
+		</init>
+
+		<paint>
+			<img xpos = "30" ypos = "150" name = "f:/appl/logo.png"  />
+		</paint>  
+	</form>
+
+</DialogGui>

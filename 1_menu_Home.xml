@@ -1,0 +1,213 @@
+<!-- Menu -->
+	<menu name="menu_home">
+		<OPEN_FORM name="Home"/>
+
+		<softkey POSITION="1" >
+			<caption>Home</caption>
+			<navigation>menu_home</navigation>
+		</softkey>
+
+		<softkey POSITION="2" >
+			<caption>Auto</caption>
+			<navigation>menu_Auto</navigation>
+		</softkey>
+
+		<softkey POSITION="3" >
+			<caption>SemiAuto</caption>
+			<navigation>menu_SemiAuto</navigation>
+		</softkey>
+
+		<softkey POSITION="4" >
+			<caption>Manual</caption>
+			<navigation>menu_Manual</navigation>
+		</softkey>
+
+		<softkey POSITION="5" >
+			<caption>Setting</caption>
+			<navigation>menu_Setting</navigation>
+		</softkey>
+
+		<softkey POSITION="6" >
+			<caption>Maintenance</caption>
+			<navigation>menu_Maintenance</navigation>
+		</softkey>
+
+		<softkey_back>
+			<navigation>Main</navigation>
+		</softkey_back>
+
+	</menu>
+
+<!-- Form -->
+	<form name="Home" color="#DCE6F1">
+		<init>
+			<caption>Value changed handler  (file: value_changed.xml)</caption>
+			<data_access type="true" />
+		
+			<REQUEST name = "plc/m10.0" function="event_changed_plc_mb10_bit0"/>
+			<REQUEST name = "plc/m10.1" function="event_changed_plc_mb10_bit1"/>
+			<REQUEST name = "plc/m10.2" function="event_changed_plc_mb10_bit2"/>
+			<REQUEST name = "plc/m10.3" function="event_changed_plc_mb10_bit3"/>
+			<REQUEST name = "plc/m10.4" function="event_changed_plc_mb10_bit4"/>
+			<REQUEST name = "plc/m10.5" function="event_changed_plc_mb10_bit5"/>
+			<REQUEST name = "plc/m10.6" function="event_changed_plc_mb10_bit6"/>
+			<REQUEST name = "plc/m10.7" function="event_changed_plc_mb10_bit7"/>
+		
+			<REQUEST name = "var8" function="event_changed_local_var"/>
+			<REQUEST name = "var13" function="event_var13"/>
+			<REQUEST name = "var14" function="event_var14"/>
+		
+			<control name = "c1" xpos = "200" ypos = "35" refvar="plc/mb10" hotlink="true" />
+			<control name = "m7" xpos = "010" ypos = "75" refvar="var7" hotlink="true" fieldtype="readonly" color_bk="#f0f0f0"/>
+			<control name = "m6" xpos = "080" ypos = "75" refvar="var6" hotlink="true" fieldtype="readonly" color_bk="#f0f0f0"/>
+			<control name = "m5" xpos = "150" ypos = "75" refvar="var5" hotlink="true" fieldtype="readonly" color_bk="#f0f0f0"/>
+			<control name = "m4" xpos = "220" ypos = "75" refvar="var4" hotlink="true" fieldtype="readonly" color_bk="#f0f0f0"/>
+			<control name = "m3" xpos = "290" ypos = "75" refvar="var3" hotlink="true" fieldtype="readonly" color_bk="#f0f0f0"/>
+			<control name = "m2" xpos = "360" ypos = "75" refvar="var2" hotlink="true" fieldtype="readonly" color_bk="#f0f0f0"/>
+			<control name = "m1" xpos = "430" ypos = "75" refvar="var1" hotlink="true" fieldtype="readonly" color_bk="#f0f0f0"/>
+			<control name = "m0" xpos = "500" ypos = "75" refvar="var0" hotlink="true" fieldtype="readonly" color_bk="#f0f0f0"/>
+		
+			<control name = "c4" xpos = "080" ypos = "120" refvar="var8" hotlink="true" />
+			<control name = "s5" xpos = "290" ypos = "120" refvar="var9" fieldtype="readonly" hotlink="true" color_bk="#f0f0f0"/>
+		
+		
+			<control name="pb1" xpos="010" ypos="200" width="50" height="30" refvar="var11" fieldtype="pushbutton" function="button_handler" hotlink="true">
+				<property checkable="true"/>
+				<property picture="sk_circ_grind_cg.png" />
+			</control>
+		
+		
+			<control name="pb2" xpos="150" ypos="200" width="50" height="30" refvar="var12" fieldtype="pushbutton" >
+				<property checkable="true"/>					
+				<caption> Button </caption>
+				<caption pressed="true"> Button text </caption>
+				<caption pressed="true"> "plc/mb10.0" = 1 </caption>
+			</control>
+		
+			<control name="pb3" xpos="250" ypos="200" width="50" height="30" refvar="var13" fieldtype="pushbutton" >
+				<caption> var13 </caption>
+			</control>
+			<control name="pb4" xpos="300" ypos="200" width="50" height="30" refvar="var14" fieldtype="pushbutton" >
+				<caption> var14 </caption>
+			</control>
+		
+			<control name="pb5" xpos="350" ypos="200" width="50" height="30" refvar="var15" fieldtype="pushbutton" function="handler_15">
+				<caption> var15 </caption>
+			</control>
+		
+		
+			<control name="ot1" xpos="070" ypos="200" width="10" height="30" refvar="var13" fieldtype="readonly" function="button_handler" />
+		
+		
+		
+			<control name="name1" xpos="300" ypos="300" fieldtype="pushbutton" refvar="button_state" hotlink="true" color_fg="#ff000f" color_bk="#000eee">
+			<property checkable="true" />
+			<caption></caption>
+			<property picture="sk_circ_grind_cg.png" alignment="left" TextAlignedToPicture="true" scaled="true"/>
+			</control>
+		
+		
+			<control name="name2" xpos="100" ypos="300" fieldtype="pushbutton" refvar="button_state" color_fg="#ff000f" color_bk="#000eee">
+			<property checkable="true" />
+			<caption></caption>
+			<property picture="sk_circ_grind_cg.png" alignment="left" TextAlignedToPicture="true" scaled="true"/>
+			</control>
+		
+		</init>
+		
+		<paint>
+			<text xpos="010" ypos="35">mb10 enter a value</text>
+			<text xpos="010" ypos="58">mb10.7 result</text>
+			<text xpos="080" ypos="58">mb10.6 result</text>
+			<text xpos="150" ypos="58">mb10.5 result</text>
+			<text xpos="220" ypos="58">mb10.4 result</text>
+			<text xpos="290" ypos="58">mb10.3 result</text>
+			<text xpos="360" ypos="58">mb10.2 result</text>
+			<text xpos="430" ypos="58">mb10.1 result</text>
+			<text xpos="500" ypos="58">mb10.0 result</text>
+		
+			<text xpos="010" ypos="120">enter a value</text>
+			<text xpos="080" ypos="100">var4</text>
+			<text xpos="290" ypos="100">var5 = var4 * 11</text>
+			<text xpos="220" ypos="120">var5 result:</text>
+		
+		
+		</paint>
+	</form>
+<!-- Variables-->
+	<let name="var0"></let>
+	<let name="var1"></let>
+	<let name="var2"></let>
+	<let name="var3"></let>
+	<let name="var4"></let>
+	<let name="var5"></let>
+	<let name="var6"></let>
+	<let name="var7"></let>
+	<let name="var8"></let>
+	<let name="var9"></let>
+
+	<let name="var11"></let>
+	<let name="var12"></let>
+	<let name="var13"></let>
+	<let name="var14"></let>
+	<let name="var15"></let>
+
+<!-- Functions -->
+	<function_body name="event_changed_plc_mb10_bit0" >
+		<op> var0 = "plc/m10.0"</op>
+	</function_body>
+	<function_body name="event_changed_plc_mb10_bit1" >
+		<op> var1 = "plc/m10.1"</op>
+	</function_body>
+	<function_body name="event_changed_plc_mb10_bit2" >
+		<op> var2 = "plc/m10.2"</op>
+	</function_body>
+	<function_body name="event_changed_plc_mb10_bit3" >
+		<op> var3 = "plc/m10.3"</op>
+	</function_body>
+	<function_body name="event_changed_plc_mb10_bit4" >
+		<op> var4 = "plc/m10.4"</op>
+	</function_body>
+	<function_body name="event_changed_plc_mb10_bit5" >
+		<op> var5 = "plc/m10.5"</op>
+	</function_body>
+	<function_body name="event_changed_plc_mb10_bit6" >
+		<op> var6 = "plc/m10.6"</op>
+	</function_body>
+	<function_body name="event_changed_plc_mb10_bit7" >
+		<op> var7 = "plc/m10.7"</op>
+	</function_body>
+	<function_body name="event_changed_local_var" >
+		<op> var9 = var8*11</op>
+	</function_body>
+	
+	<function_body name="button_handler" >
+		<if condition="var11 == 1">
+			<then>
+				<op>"plc/m11.0"= 1</op>
+			</then>
+			<else>
+				<op>"plc/m11.0"= 0</op>
+			</else>
+		</if>
+	</function_body>
+	<function_body name="event_var13" >
+				<op> "plc/m10.0"= 1</op>
+	</function_body>
+	<function_body name="event_var14" >
+
+				<op>"plc/m10.0"= 0</op>
+
+	</function_body>
+	<function_body name="handler_15" >
+		<if condition="plc/m10.0 == 1">
+			<then>
+				<op>var15= 0</op>
+				<op>"plc/m10.0"= 0</op>
+			</then>
+			<else>
+				<op>var15= 1</op>
+				<op>"plc/m10.0"= 1</op>
+			</else>
+		</if>
+	</function_body>

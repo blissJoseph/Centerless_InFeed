@@ -1,0 +1,230 @@
+<!-- Menu-->
+    <menu name="menu_Auto">
+        <OPEN_FORM name="Auto"/>
+
+        <softkey POSITION="1" >
+            <caption>Home</caption>
+            <navigation>menu_home</navigation>
+        </softkey>
+
+        <softkey POSITION="2" >
+            <caption>Auto</caption>
+            <navigation>menu_Auto</navigation>
+        </softkey>
+
+        <softkey POSITION="3" >
+            <caption>SemiAuto</caption>
+            <navigation>menu_SemiAuto</navigation>
+        </softkey>
+
+        <softkey POSITION="4" >
+            <caption>Manual</caption>
+            <navigation>menu_Manual</navigation>
+        </softkey>
+
+        <softkey POSITION="5" >
+            <caption>Setting</caption>
+            <navigation>menu_Setting</navigation>
+        </softkey>
+
+        <softkey POSITION="6" >
+            <caption>Maintenance</caption>
+            <navigation>menu_Maintenance</navigation>
+        </softkey>
+
+        <softkey_back>
+            <navigation>Main</navigation>
+        </softkey_back>
+
+    </menu>
+<!--Form-->
+<form name="Auto" color = "#DCE6F1">
+    <init>
+        <!-- Title Box-->
+	    <control name="Machine_Position" xpos="20" ypos="10" width="110" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "12" fieldtype="pushbutton" >
+            <caption>MACHINE POSITION</caption>
+		</control>
+		<control name="Weel_Diameter_Button" xpos="20" ypos="170" width="110" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "12" fieldtype="pushbutton" >
+				<caption>WHEEL DIAMETER</caption>
+		</control>
+        <control name="Load_Button" xpos="20" ypos="250" width="110" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "12" fieldtype="pushbutton" >
+            <caption>LOAD</caption>
+        </control>
+
+
+        <control name="LAST_Button_Button" xpos="150" ypos="14" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "12" fieldtype="pushbutton" >
+            <caption>LAST</caption>
+        </control>
+        <control name="Process_Step_Button" xpos="210" ypos="14" width="150" height="20" color_bk="#757575" color_fg = "#FFFFFF"  fontpixelsize = "12" fieldtype="pushbutton" >
+            <caption>PROCESS STEP</caption>
+        </control>
+        <control name="This_Button" xpos="370" ypos="14" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF"  fontpixelsize = "12" fieldtype="pushbutton" >
+            <caption>THIS</caption>
+        </control>
+
+
+        <control name="Total_Production_button" xpos="445" ypos="10" width="110" height="20" color_bk="#757575" color_fg = "#FFFFFF"  fontpixelsize = "12" fieldtype="pushbutton" >
+            <caption>TOTAL PRODUCTION</caption>
+        </control>
+        <control name="Lot_Production_Button" xpos="445" ypos="170" width="110" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "12" fieldtype="pushbutton" >
+            <caption>LOT PRODUCTION</caption>
+        </control>
+        <control name="Dressing_Skip_Count_Button" xpos="445" ypos="250" width="110" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+            <caption>DRESSING SKIP COUNT</caption>
+        </control>
+        <control name="Dressing_Count_Button" xpos="470" ypos="350" width="50" height="25" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "8" fieldtype="pushbutton" >
+            <caption>DRESSING COUNT</caption>
+        </control>
+
+
+        <!-- MACHINE POSITION-->
+        <control name = "AX1" xpos = "60" ypos = "43" refvar="nck/Channel/GeometricAxis/actProgPos[1]" fieldtype="readonly" format="%9.3f" fontpixelsize = "12" time="superfast" />
+        <control name = "AX2" xpos = "60" ypos = "63" refvar="nck/Channel/GeometricAxis/actProgPos[2]" fieldtype="readonly" format="%9.3f" fontpixelsize = "12" time="superfast" />
+        <control name = "AX3" xpos = "60" ypos = "83" refvar="nck/Channel/GeometricAxis/actProgPos[3]" fieldtype="readonly" format="%9.3f" fontpixelsize = "12" time="superfast" />
+        <control name = "AX4" xpos = "60" ypos = "103" refvar="nck/Channel/GeometricAxis/actProgPos[4]" fieldtype="readonly" format="%9.3f" fontpixelsize = "12" time="superfast" />
+        
+        <control name = "AX5" xpos = "60" ypos = "155" refvar="nck/Channel/GeometricAxis/actProgPos[5]" fieldtype="readonly" format="%9.3f" fontpixelsize = "12" time="superfast" />
+
+
+        <!-- WHEEL DIAMETER-->
+        <control name = "Wheel_Now" xpos = "60" ypos = "205" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%8.2f" fontpixelsize = "12" time="superfast" />
+        <control name = "Wheel_Worn" xpos = "60" ypos = "225" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.3f" fontpixelsize = "12" time="superfast" />
+        <control name = "Wheel_Override" xpos = "60" ypos = "245" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.3f" fontpixelsize = "12" time="superfast" />
+
+        <!-- LOAD -->
+        <control name = "Load_Z" xpos = "35" ypos = "282" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.0f" fontpixelsize = "12" time="superfast" />
+        <control name = "Load_U1" xpos = "35" ypos = "302" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.0f" fontpixelsize = "12" time="superfast" />
+        <control name = "Load_U2" xpos = "35" ypos = "322" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.0f" fontpixelsize = "12" time="superfast" />
+        <control name = "Load_W1" xpos = "90" ypos = "303" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.0f" fontpixelsize = "12" time="superfast" />
+        <control name = "Load_W2" xpos = "90" ypos = "323" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.0f" fontpixelsize = "12" time="superfast" />
+        
+        <!-- LAST -->
+
+        <control name = "LAST1" xpos = "150" ypos = "40" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.3f" fontpixelsize = "15" time="superfast" />
+        <control name = "LAST2" xpos = "150" ypos = "65" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.3f" fontpixelsize = "15" time="superfast" />
+        <control name = "LAST3" xpos = "150" ypos = "90" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.3f" fontpixelsize = "15" time="superfast" />
+        <control name = "LAST4" xpos = "150" ypos = "115" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.3f" fontpixelsize = "15" time="superfast" />
+        <control name = "LAST5" xpos = "150" ypos = "140" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.3f" fontpixelsize = "15" time="superfast" />
+        <control name = "LAST6" xpos = "150" ypos = "165" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.3f" fontpixelsize = "15" time="superfast" />
+        <control name = "LAST7" xpos = "150" ypos = "190" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.3f" fontpixelsize = "15" time="superfast" />
+        <control name = "LAST8" xpos = "150" ypos = "215" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.3f" fontpixelsize = "15" time="superfast" />
+        <control name = "LAST9" xpos = "150" ypos = "240" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.3f" fontpixelsize = "15" time="superfast" />
+        <control name = "LAST10" xpos = "150" ypos = "265" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.3f" fontpixelsize = "15" time="superfast" />
+        <control name = "LAST11" xpos = "150" ypos = "290" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.3f" fontpixelsize = "15" time="superfast" />
+        <control name = "LAST12" xpos = "150" ypos = "315" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.3f" fontpixelsize = "15" time="superfast" />
+
+
+
+        <!-- PROCESS STEP -->
+
+
+
+        <!-- CYCLE TIME -->
+
+
+        <!-- THIS -->
+        
+        
+        <!-- TOTAL PRODUCTION -->
+        
+        
+        <!-- LOT PRODUCTION -->
+
+        <!-- DRESSING SKIP COUNT -->
+
+
+        <!-- DRESSING COUNT -->
+
+
+        <!-- COMPENSATION AMOUNT -->
+
+    </init>
+
+    <paint>
+            <BOX xpos = "0" ypos = "0" width = "590" height = "410" color = "#DCE6F1" />
+
+        <!--LEFT-->
+            <!-- MACHINE POSITION-->
+                <text xpos = "25" ypos = "35" width="16" height="32" fontpixelsize = "10">Z </text>
+                <text xpos = "25" ypos = "55" width="16" height="32" fontpixelsize = "10">U1</text>
+                <text xpos = "25" ypos = "75" width="16" height="32" fontpixelsize = "10">W1</text>
+                <text xpos = "25" ypos = "95" width="16" height="32" fontpixelsize = "10">U2</text>
+                <text xpos = "25" ypos = "115" width="16" height="32" fontpixelsize = "10">W2</text>
+
+                <text xpos = "110" ypos = "35" width="26" height="16" fontpixelsize = "10">mm</text>
+                <text xpos = "110" ypos = "55" width="26" height="16" fontpixelsize = "10">mm</text>
+                <text xpos = "110" ypos = "75" width="26" height="16" fontpixelsize = "10">mm</text>
+                <text xpos = "110" ypos = "95" width="26" height="16" fontpixelsize = "10">mm</text>
+                <text xpos = "110" ypos = "115" width="26" height="16" fontpixelsize = "10">mm</text>
+                    
+                <box xpos="18" ypos="130" width="110" height="45" color="#7F7F7F" />
+                <box xpos="20" ypos="132" width="106" height="41" color="#FFFFFF" />
+                <text xpos="25" ypos="135" fontpixelsize = "10" color="#000000">DISTANCE TO GO </text>
+                <text xpos = "25" ypos = "155" width="16" height="32" fontpixelsize = "10">Z </text>
+                <text xpos = "110" ypos = "155" width="26" height="16" fontpixelsize = "10">mm</text>
+
+
+            <!-- WHEEL DIAMETER-->
+                <text xpos = "25" ypos = "205" width="16" height="32" fontpixelsize = "10">NOW </text>
+                <text xpos = "25" ypos = "225" width="16" height="32" fontpixelsize = "10">WORN</text>
+                <text xpos = "25" ypos = "245" width="16" height="32" fontpixelsize = "10">OVERRIDE</text>
+
+                <text xpos = "110" ypos = "205" width="16" height="32" fontpixelsize = "10">mΦ </text>
+                <text xpos = "110" ypos = "225" width="16" height="32" fontpixelsize = "10">mΦ</text>
+                <text xpos = "110" ypos = "245" width="16" height="32" fontpixelsize = "10">%</text>
+            
+
+            <!-- LOAD -->
+                <text xpos = "25" ypos = "285" width="16" height="32" fontpixelsize = "10">Z </text>
+                <text xpos = "25" ypos = "305" width="16" height="32" fontpixelsize = "10">U1</text>
+                <text xpos = "25" ypos = "325" width="16" height="32" fontpixelsize = "10">U2</text>
+
+                <text xpos = "85" ypos = "305" width="16" height="32" fontpixelsize = "10">W1</text>
+                <text xpos = "85" ypos = "325" width="16" height="32" fontpixelsize = "10">W2</text>
+
+        <!--CENTER-->
+                <box xpos="140" ypos="10" width="290" height="385" color="#00D8FF" />
+                <box xpos="142" ypos="12" width="286" height="381" color="#FFFFFF" />
+
+
+
+
+
+
+
+
+        <!-- LAST -->
+
+
+        <!-- PROCESS STEP -->
+
+
+
+        <!-- CYCLE TIME -->
+
+
+        <!-- THIS -->
+        
+        
+        <!-- TOTAL PRODUCTION -->
+        
+        
+        <!-- LOT PRODUCTION -->
+
+        <!-- DRESSING SKIP COUNT -->
+
+
+        <!-- DRESSING COUNT -->
+
+
+        <!-- COMPENSATION AMOUNT -->
+    </paint>
+</form>
+<!--Variables-->
+
+    <!--Ring Feeder-->
+
+<!--Functions-->
+
+    <!-- Ring Feeder-->
+

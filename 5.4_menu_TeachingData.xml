@@ -1,0 +1,196 @@
+<!--Menu-->
+    <menu name="menu_TeachingData">
+        <OPEN_FORM name="TeachingData"/>
+
+        <softkey POSITION="1" >
+            <caption>Home</caption>
+            <navigation>menu_home</navigation>
+        </softkey>
+
+        <softkey POSITION="2" >
+            <caption>Auto</caption>
+            <navigation>menu_Auto</navigation>
+        </softkey>
+
+        <softkey POSITION="3" >
+            <caption>SemiAuto</caption>
+            <navigation>menu_SemiAuto</navigation>
+        </softkey>
+
+        <softkey POSITION="4" >
+            <caption>Manual</caption>
+            <navigation>menu_Manual</navigation>
+        </softkey>
+
+        <softkey POSITION="5" >
+            <caption>Setting</caption>
+            <navigation>menu_Setting</navigation>
+        </softkey>
+
+        <softkey POSITION="6" >
+            <caption>Maintenance</caption>
+            <navigation>menu_Maintenance</navigation>
+        </softkey>
+
+        <softkey_back>
+            <navigation>Main</navigation>
+        </softkey_back>
+
+        <softkey POSITION="9" >
+            <caption>CYCLE DATA</caption>
+            <navigation>menu_Setting</navigation>
+        </softkey>
+
+        <softkey POSITION="10" >
+            <caption>DRESSING DATA </caption>
+            <navigation>menu_DressingData</navigation>
+        </softkey>
+
+        <softkey POSITION="11" >
+            <caption>UTILITY DATA </caption>
+            <navigation>menu_UtilityData</navigation>
+        </softkey>
+
+        <softkey POSITION="12" >
+            <caption>TEACHING DATA </caption>
+            <navigation>menu_TeachingData</navigation>
+        </softkey>
+
+    </menu>
+
+
+
+
+<let name="SET_Z1"></let>
+<let name="SET_W1"></let>
+<let name="SET_W2"></let>
+
+
+
+<!--Form-->
+    <form name="TeachingData" color="#DCE6F1">
+    <init>
+            <data_access type="true" />
+            <request name="SET_Z1" function="event_Z1" />
+            <request name="SET_W1" function="event_W1" />
+            <request name="SET_W2" function="event_W2" />
+            <!--Left -->
+                <!-- Processing Feeder(Z)-->
+                    <control name="Grinding_Wheel_Data" xpos="20" ypos="10" width="120" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "12" fieldtype="pushbutton" >
+                        <caption alignment= "left"> Processing Feeder(Z)</caption>
+                    </control>
+
+                    <control name="Processing_Feeder(Z)" xpos="180" ypos="20" width="35" height="10" refvar="nck/Channel/GeometricAxis/actProgPos[1]" fieldtype="readonly" hotlink="true" format="%9.4f" fontpixelsize = "8" color_bk = "#FFFFFF"/>
+                    <control name="Z_Grind_Memory_Po" xpos="180" ypos="40" width="35" height="10" refvar="gud/nck/mgud/_ORS[261]" fieldtype="readonly" hotlink="true" format="%9.4f" fontpixelsize = "8" color_bk = "#FFFFFF"/>
+                    <control name="Z_Wait_Po" xpos="180" ypos="60" width="35" height="10" refvar="gud/nck/mgud/_ORS[262]" fieldtype="readonly" hotlink="true" format="%9.4f" fontpixelsize = "8" color_bk = "#FFFFFF"/>
+
+                    <control name="Z_Grind_Teach_Po" xpos="440" ypos="60" width="35" height="10" refvar="gud/nck/mgud/_ORS[263]" fieldtype="readonly" hotlink="true" format="%9.4f" fontpixelsize = "8" color_bk = "#FFFFFF"/>
+
+                    <control name="Z_Grind_Teach_Po_Set" xpos="480" ypos="60" width="50" height="20" color_bk="#00FFFF" color_fg = "#000000" fieldtype="pushbutton" refvar="SET_Z1">
+                        <caption> set </caption>
+                    </control>
+
+
+
+                <!-- G/W Dresser (W1) -->
+                    <control name="Regulating_Wheel_Data" xpos="20" ypos="100" width="120" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "12" fieldtype="pushbutton" >
+                        <caption alignment= "left">G/W Dresser (W1) </caption>
+                    </control>
+
+                    <control name="W1" xpos="180" ypos="110" width="35" height="10" refvar="nck/Channel/GeometricAxis/actProgPos[4]" fieldtype="readonly" hotlink="true" format="%9.4f" fontpixelsize = "8" color_bk = "#FFFFFF"/>
+                    <control name="W1_Dress_Mem_Po" xpos="180" ypos="130" width="35" height="10" refvar="gud/nck/mgud/_ORS[271]" fieldtype="readonly" hotlink="true" format="%9.4f" fontpixelsize = "8" color_bk = "#FFFFFF"/>
+                    <control name="W1_Wait_Po" xpos="180" ypos="150" width="35" height="10" refvar="gud/nck/mgud/_ORS[272]" fieldtype="readonly" hotlink="true" format="%9.4f" fontpixelsize = "8" color_bk = "#FFFFFF"/>
+
+                    <control name="W1_Dress_Teach_Po" xpos="440" ypos="150" width="35" height="10" refvar="gud/nck/mgud/_ORS[273]" fieldtype="readonly" hotlink="true" format="%9.4f" fontpixelsize = "8" color_bk = "#FFFFFF"/>
+
+                    <control name="W1_Grind_Teach_Po_Set" xpos="480" ypos="150" width="50" height="20" color_bk="#00FFFF" color_fg = "#000000" fontpixelsize = "8" fieldtype="pushbutton" refvar="SET_W1" >
+                        <caption> set </caption>
+                    </control>
+
+                <!-- R/W Dresser(W2)  -->
+                    <control name="Sliding_Lubrication_Cycle" xpos="20" ypos="200" width="120" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "12" fieldtype="pushbutton" >
+                        <caption alignment= "left">R/W Dresser(W2) </caption>
+                    </control>
+
+
+                    <control name="RWDresser(W2)" xpos="180" ypos="210" width="35" height="10" refvar="nck/Channel/GeometricAxis/actProgPos[5]" fieldtype="readonly" hotlink="true" format="%9.4f" fontpixelsize = "8" color_bk = "#FFFFFF"/>
+                    <control name="W2_Dress_Mem_Po" xpos="180" ypos="230" width="35" height="10" refvar="gud/nck/mgud/_ORS[281]" fieldtype="readonly" hotlink="true" format="%9.4f" fontpixelsize = "8" color_bk = "#FFFFFF"/>
+                    <control name="W2_Wait_Po" xpos="180" ypos="250" width="35" height="10" refvar="gud/nck/mgud/_ORS[282]" fieldtype="readonly" hotlink="true" format="%9.4f" fontpixelsize = "8" color_bk = "#FFFFFF"/>
+
+                    <control name="W2_Dress_Teach_Po" xpos="440" ypos="230" width="35" height="10" refvar="gud/nck/mgud/_ORS[283]" fieldtype="readonly" hotlink="true" format="%9.4f" fontpixelsize = "8" color_bk = "#FFFFFF"/>
+
+                    <control name="W2_Grind_Teach_Po_Set" xpos="480" ypos="230" width="50" height="20" color_bk="#00FFFF" color_fg = "#000000" fontpixelsize = "8" fieldtype="pushbutton" refvar="SET_W2" >
+                        <caption> set </caption>
+                    </control>
+
+        </init>
+
+        <paint>
+            <BOX xpos = "0" ypos = "0" width = "590" height = "410" color = "#DCE6F1" />
+            <!--Left -->
+                <!-- Processing Feeder(Z)-->
+                    <text xpos = "30" ypos = "40" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> Grinding memory position </text>
+                    <text xpos = "30" ypos = "60" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> Wait position (calculated) </text>
+
+                    <text xpos = "220" ypos = "20" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> mm </text>
+                    <text xpos = "220" ypos = "40" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> mm </text>
+                    <text xpos = "220" ypos = "60" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> mm </text>
+
+                    <text xpos = "320" ypos = "60" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> Grinding teaching position </text>
+
+
+                <!-- G/W Dresser (W1)-->
+                    <text xpos = "30" ypos = "130" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> Grinding memory position </text>
+                    <text xpos = "30" ypos = "150" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> Wait position (calculated) </text>
+
+                    <text xpos = "220" ypos = "110" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> mm </text>
+                    <text xpos = "220" ypos = "130" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> mm </text>
+                    <text xpos = "220" ypos = "150" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> mm </text>
+
+                    <text xpos = "320" ypos = "150" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> Dressing teaching position </text>
+
+
+                <!-- R/W Dresser(W2) -->
+                    <text xpos = "30" ypos = "230" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> Grinding memory position </text>
+                    <text xpos = "30" ypos = "250" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> Wait position (calculated) </text>
+
+
+                    <text xpos = "220" ypos = "210" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> mm  </text>
+                    <text xpos = "220" ypos = "230" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> mm </text>
+                    <text xpos = "220" ypos = "250" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> mm </text>
+
+            <!-- Right -->
+
+                <!-- Spindle Lubrication Cycle -->
+                    <text xpos = "320" ypos = "230" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> Dressing teahing position </text>
+
+
+
+
+
+        </paint>
+    </form>
+<!--Variables-->
+    <let name="SET_Z1"></let>
+    <let name="SET_W1"></let>
+    <let name="SET_W2"></let>
+
+<!--Functions-->
+    <function_body name="event_Z1">
+        <op>"gud/nck/mgud/_ORS[261]"="nck/Channel/GeometricAxis/actProgPos[1]"</op>
+        <op>"gud/nck/mgud/_ORS[262]"="nck/Channel/GeometricAxis/actProgPos[1]"+"gud/nck/mgud/_ORS[121]"</op>
+        <op>"gud/nck/mgud/_ORS[263]"="nck/Channel/GeometricAxis/actProgPos[1]"</op>
+        <op>"plc/db9013.dbd328"="nck/Channel/GeometricAxis/actProgPos[1]"</op>
+    </function_body>
+
+    <function_body name="event_W1">
+        <op>"gud/nck/mgud/_ORS[271]"="nck/Channel/GeometricAxis/actProgPos[4]"</op>
+        <op>"gud/nck/mgud/_ORS[272]"="nck/Channel/GeometricAxis/actProgPos[4]"+"gud/nck/mgud/_ORS[121]"</op>
+        <op>"gud/nck/mgud/_ORS[273]"="nck/Channel/GeometricAxis/actProgPos[4]"</op>
+    </function_body>
+
+    <function_body name="event_W2">
+        <op>"gud/nck/mgud/_ORS[281]"="nck/Channel/GeometricAxis/actProgPos[5]"</op>
+        <op>"gud/nck/mgud/_ORS[282]"="nck/Channel/GeometricAxis/actProgPos[5]"+"gud/nck/mgud/_ORS[121]"</op>
+        <op>"gud/nck/mgud/_ORS[283]"="nck/Channel/GeometricAxis/actProgPos[5]"</op>
+    </function_body>

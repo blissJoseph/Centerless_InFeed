@@ -1,0 +1,64 @@
+<!--Menu-->
+	<menu name="menu_JobList">
+		<OPEN_FORM name="JobList"/>
+
+		<softkey POSITION="1" >
+			<caption>Home</caption>
+			<navigation>menu_home</navigation>
+		</softkey>
+
+		<softkey POSITION="2" >
+			<caption>Auto</caption>
+			<navigation>menu_Auto</navigation>
+		</softkey>
+
+		<softkey POSITION="3" >
+			<caption>SemiAuto</caption>
+			<navigation>menu_SemiAuto</navigation>
+		</softkey>
+
+		<softkey POSITION="4" >
+			<caption>Manual</caption>
+			<navigation>menu_Manual</navigation>
+		</softkey>
+
+		<softkey POSITION="5" >
+			<caption>Setting</caption>
+			<navigation>menu_Setting</navigation>
+		</softkey>
+
+		<softkey POSITION="6" >
+			<caption>Maintenance</caption>
+			<navigation>menu_Maintenance</navigation>
+		</softkey>
+
+		<softkey_back>
+			<navigation>Main</navigation>
+		</softkey_back>
+
+		<softkey POSITION="9" >
+			<caption>menu_test9</caption>
+			<navigation>menu_test9</navigation>
+		</softkey>
+
+		<softkey POSITION="12" >
+			<caption>JOB LIST</caption>
+			<navigation>menu_JobList</navigation>
+		</softkey>
+
+	</menu>
+<!--Form-->
+	<form name="JobList" color="#DCE6F1">
+		<init>
+
+
+		</init>
+
+
+		<paint>
+				<BOX xpos = "0" ypos = "0" width = "590" height = "410" color = "#DCE6F1" />
+				<img xpos = "30" ypos = "150" name = "f:/appl/logo.png"  />
+		</paint>
+	</form>
+<!--Variables-->
+<!--Functions-->

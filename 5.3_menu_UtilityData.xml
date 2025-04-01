@@ -1,0 +1,191 @@
+<!--Menu-->
+<menu name="menu_UtilityData">
+	<OPEN_FORM name="UtilityData"/>
+
+	<softkey POSITION="1" >
+		<caption>Home</caption>
+		<navigation>menu_home</navigation>
+	</softkey>
+
+	<softkey POSITION="2" >
+		<caption>Auto</caption>
+		<navigation>menu_Auto</navigation>
+	</softkey>
+
+	<softkey POSITION="3" >
+		<caption>SemiAuto</caption>
+		<navigation>menu_SemiAuto</navigation>
+	</softkey>
+
+	<softkey POSITION="4" >
+		<caption>Manual</caption>
+		<navigation>menu_Manual</navigation>
+	</softkey>
+
+	<softkey POSITION="5" >
+		<caption>Setting</caption>
+		<navigation>menu_Setting</navigation>
+	</softkey>
+
+	<softkey POSITION="6" >
+		<caption>Maintenance</caption>
+		<navigation>menu_Maintenance</navigation>
+	</softkey>
+
+	<softkey_back>
+		<navigation>Main</navigation>
+	</softkey_back>
+
+	<softkey POSITION="9" >
+		<caption>CYCLE DATA</caption>
+		<navigation>menu_Setting</navigation>
+	</softkey>
+	
+	<softkey POSITION="10" >
+		<caption>DRESSING DATA </caption>
+		<navigation>menu_DressingData</navigation>
+	</softkey>
+	
+	<softkey POSITION="11" >
+		<caption>UTILITY DATA </caption>
+		<navigation>menu_UtilityData</navigation>
+	</softkey>
+	
+	<softkey POSITION="12" >
+		<caption>TEACHING DATA </caption>
+		<navigation>menu_TeachingData</navigation>
+	</softkey>
+
+</menu>
+
+
+<!--Form-->
+    <form name="UtilityData" color="#DCE6F1">
+        <init>
+            <!--Left -->
+                <!-- Grinding Wheel Data-->
+                    <control name="Grinding_Wheel_Data" xpos="20" ypos="10" width="120" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "12" fieldtype="pushbutton" >
+                        <caption alignment= "left"> Grinding Wheel Data</caption>
+                    </control>
+
+                    <control name="Grind_New_Wheel" xpos="180" ypos="40" width="35" height="10" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly"  format="%9.1f" fontpixelsize = "8" color_bk = "#FFFFFF"/>
+                    <control name="Grind_Initial_Dressing" xpos="180" ypos="60" width="35" height="10" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly"  format="%9.1f" fontpixelsize = "8" color_bk = "#FFFFFF"/>
+                    <control name="Grind_Warning" xpos="180" ypos="80" width="35" height="10" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly"  format="%9.1f" fontpixelsize = "8" color_bk = "#FFFFFF"/>
+
+                    <control name="Grind_Grind_Speed" xpos="440" ypos="40" width="35" height="10" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly"  format="%9.1f" fontpixelsize = "8" color_bk = "#FFFFFF"/>
+                    <control name="Grind_Dress_Speed" xpos="440" ypos="60" width="35" height="10" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly"  format="%9.1f" fontpixelsize = "8" color_bk = "#FFFFFF"/>
+
+
+                <!-- Regulating Wheel Data-->
+                    <control name="Regulating_Wheel_Data" xpos="20" ypos="100" width="120" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "12" fieldtype="pushbutton" >
+                        <caption alignment= "left">Regulating Wheel Data</caption>
+                    </control>
+
+                    <control name="Regul_New_Wheel" xpos="180" ypos="130" width="35" height="10" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly"  format="%9.1f" fontpixelsize = "8" color_bk = "#FFFFFF"/>
+                    <control name="Regul_Initial_Dressing" xpos="180" ypos="150" width="35" height="10" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly"  format="%9.1f" fontpixelsize = "8" color_bk = "#FFFFFF"/>
+                    <control name="Regul_Warning" xpos="180" ypos="170" width="35" height="10" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly"  format="%9.1f" fontpixelsize = "8" color_bk = "#FFFFFF"/>
+
+                    <control name="Regul_Grind_Speed" xpos="440" ypos="130" width="35" height="10" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly"  format="%9.1f" fontpixelsize = "8" color_bk = "#FFFFFF"/>
+                    <control name="Regul_Dress_Speed" xpos="440" ypos="150" width="35" height="10" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly"  format="%9.1f" fontpixelsize = "8" color_bk = "#FFFFFF"/>
+
+
+                <!-- Sliding Lubrication Cycle -->
+                    <control name="Sliding_Lubrication_Cycle" xpos="20" ypos="200" width="120" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "12" fieldtype="pushbutton" >
+                        <caption alignment= "left">Sliding Lubrication Cycle</caption>
+                    </control>
+
+                    <control name="Sliding_Lubrication_Cycle_On" xpos="180" ypos="200" width="30" height="20" color_bk="#FFFF00" color_fg = "#FFFFFF" fontpixelsize = "8" fieldtype="pushbutton" >
+                        <caption alignment= "left">ON</caption>
+                    </control>
+
+
+                    <control name="Slid_Lub_Init_Op" xpos="180" ypos="230" width="35" height="10" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly"  format="%9.1f" fontpixelsize = "8" color_bk = "#FFFFFF"/>
+                    <control name="Slid_Lub_Inter_Time" xpos="180" ypos="250" width="35" height="10" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly"  format="%9.1f" fontpixelsize = "8" color_bk = "#FFFFFF"/>
+                    <control name="Slid_Lub_Cur_Op" xpos="180" ypos="270" width="35" height="10" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly"  format="%9.1f" fontpixelsize = "8" color_bk = "#FFFFFF"/>
+                    <control name="Slid_Lub_Op_Time" xpos="180" ypos="290" width="35" height="10" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly"  format="%9.1f" fontpixelsize = "8" color_bk = "#FFFFFF"/>
+
+
+            <!-- Right -->
+                <!-- Spindle Lubrication Cycle -->
+
+                    <control name="Spindle_Lubrication_Cycle" xpos="300" ypos="200" width="120" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "12" fieldtype="pushbutton" >
+                        <caption alignment= "left">Spindle Lubrication Cycle</caption>
+                    </control>
+
+                    <control name="Spindle_Lubrication_Cycle_On" xpos="440" ypos="200" width="30" height="20" color_bk="#FFFF00" color_fg = "#FFFFFF" fontpixelsize = "8" fieldtype="pushbutton" >
+                        <caption alignment= "left">ON</caption>
+                    </control>
+
+
+                    <control name="Spind_Lub_Init_Op" xpos="440" ypos="230" width="35" height="10" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly"  format="%9.1f" fontpixelsize = "8" color_bk = "#FFFFFF"/>
+                    <control name="Spind_Lub_Inter_Time" xpos="440" ypos="250" width="35" height="10" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly"  format="%9.1f" fontpixelsize = "8" color_bk = "#FFFFFF"/>
+                    <control name="Spind_Lub_Cur_Op" xpos="440" ypos="270" width="35" height="10" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly"  format="%9.1f" fontpixelsize = "8" color_bk = "#FFFFFF"/>
+                    <control name="Spind_Lub_Op_Time" xpos="440" ypos="290" width="35" height="10" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly"  format="%9.1f" fontpixelsize = "8" color_bk = "#FFFFFF"/>
+
+
+        </init>
+
+        <paint>
+            <BOX xpos = "0" ypos = "0" width = "590" height = "410" color = "#DCE6F1" />
+            <!--Left -->
+                <!-- Grinding Wheel Data-->
+                    <text xpos = "30" ypos = "40" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> New Wheel Diameter </text>
+                    <text xpos = "30" ypos = "60" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> Initial Dressing Diameter </text>
+                    <text xpos = "30" ypos = "80" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> Warning Diameter </text>
+
+                    <text xpos = "220" ypos = "40" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> mmΦ </text>
+                    <text xpos = "220" ypos = "60" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> mmΦ </text>
+                    <text xpos = "220" ypos = "80" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> mmΦ </text>
+
+                    <text xpos = "320" ypos = "40" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> Grinding Speed </text>
+                    <text xpos = "320" ypos = "60" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> Dressing Speed </text>
+
+                    <text xpos = "480" ypos = "40" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> m/min </text>
+                    <text xpos = "480" ypos = "60" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> m/min </text>
+
+                <!-- Regulating Wheel Data-->
+                    <text xpos = "30" ypos = "130" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> New Wheel Diameter </text>
+                    <text xpos = "30" ypos = "150" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> Initial Dressing Diameter </text>
+                    <text xpos = "30" ypos = "170" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> Warning Diameter </text>
+
+                    <text xpos = "220" ypos = "130" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> mmΦ </text>
+                    <text xpos = "220" ypos = "150" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> mmΦ </text>
+                    <text xpos = "220" ypos = "170" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> mmΦ </text>
+
+                    <text xpos = "320" ypos = "130" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> Grinding Speed </text>
+                    <text xpos = "320" ypos = "150" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> Dressing Speed </text>
+
+                    <text xpos = "480" ypos = "130" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> m/min </text>
+                    <text xpos = "480" ypos = "150" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> m/min </text>
+
+                <!-- Sliding Lubrication Cycle -->
+                    <text xpos = "30" ypos = "230" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> Initial Operation </text>
+                    <text xpos = "30" ypos = "250" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> Interval Time </text>
+                    <text xpos = "30" ypos = "270" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> Current Operation </text>
+                    <text xpos = "30" ypos = "290" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> Operation Time </text>
+
+                    <text xpos = "220" ypos = "230" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> times  </text>
+                    <text xpos = "220" ypos = "250" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> min </text>
+                    <text xpos = "220" ypos = "270" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> min </text>
+                    <text xpos = "220" ypos = "290" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> sec </text>
+
+            <!-- Right -->
+
+                <!-- Spindle Lubrication Cycle -->
+                    <text xpos = "320" ypos = "230" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> Initial Operation </text>
+                    <text xpos = "320" ypos = "250" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> Interval Time </text>
+                    <text xpos = "320" ypos = "270" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> Current Operation </text>
+                    <text xpos = "320" ypos = "290" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> Operation Time </text>
+
+                    <text xpos = "480" ypos = "230" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> times  </text>
+                    <text xpos = "480" ypos = "250" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> min </text>
+                    <text xpos = "480" ypos = "270" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> min </text>
+                    <text xpos = "480" ypos = "290" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> sec </text>
+
+
+
+        </paint>
+    </form>
+
+<!--Variables-->
+<!--Functions-->

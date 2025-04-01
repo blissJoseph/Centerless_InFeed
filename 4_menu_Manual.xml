@@ -1,0 +1,255 @@
+<!--Menu-->
+    <menu name="menu_Manual">
+        <OPEN_FORM name="Manual"/>
+
+        <softkey POSITION="1" >
+            <caption>Home</caption>
+            <navigation>menu_home</navigation>
+        </softkey>
+
+        <softkey POSITION="2" >
+            <caption>Auto</caption>
+            <navigation>menu_Auto</navigation>
+        </softkey>
+
+        <softkey POSITION="3" >
+            <caption>SemiAuto</caption>
+            <navigation>menu_SemiAuto</navigation>
+        </softkey>
+
+        <softkey POSITION="4" >
+            <caption>Manual</caption>
+            <navigation>menu_Manual</navigation>
+        </softkey>
+
+        <softkey POSITION="5" >
+            <caption>Setting</caption>
+            <navigation>menu_Setting</navigation>
+        </softkey>
+
+        <softkey POSITION="6" >
+            <caption>Maintenance</caption>
+            <navigation>menu_Maintenance</navigation>
+        </softkey>
+
+        <softkey_back>
+            <navigation>Main</navigation>
+        </softkey_back>
+
+    </menu>
+<!--Form-->
+    <form name="Manual" color="#DCE6F1">
+        <init>
+            <!-- Title Box-->
+                <control name="Title_Remaining_Distance" xpos="310" ypos="10" width="100" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption>REMAINING DISTANCE</caption>
+                </control>
+                <control name="Title_Machine_Position" xpos="440" ypos="10" width="100" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption>MACHINE POSITION</caption>
+                </control>
+                <control name="Title_Weel_Diameter" xpos="440" ypos="170" width="100" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                        <caption>WHEEL DIAMETER</caption>
+                </control>
+                <control name="Title_Load_Button" xpos="440" ypos="260" width="100" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption>LOAD</caption>
+                </control>
+            <!-- Left -->
+                <control name="1_Left" xpos="110" ypos="20" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption> - </caption>
+                </control>
+                <control name="1_Center" xpos="170" ypos="20" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption> - </caption>
+                </control>
+                <control name="1_Right" xpos="230" ypos="20" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption> - </caption>
+                </control>
+
+                <control name="2_Left" xpos="110" ypos="50" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption> - </caption>
+                </control>
+                <control name="2_Center" xpos="170" ypos="50" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption> - </caption>
+                </control>
+                <control name="2_Right" xpos="230" ypos="50" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption> - </caption>
+                </control>
+
+                <control name="3_Left" xpos="110" ypos="80" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption> - </caption>
+                </control>
+                <control name="3_Center" xpos="170" ypos="80" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption> - </caption>
+                </control>
+                <control name="3_Right" xpos="230" ypos="80" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption> - </caption>
+                </control>
+
+                <control name="4_Left" xpos="110" ypos="110" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption> - </caption>
+                </control>
+                <control name="4_Center" xpos="170" ypos="110" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption> - </caption>
+                </control>
+                <control name="4_Right" xpos="230" ypos="110" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption> - </caption>
+                </control>
+
+                <control name="5_Left" xpos="110" ypos="140" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption> - </caption>
+                </control>
+                <control name="5_Center" xpos="170" ypos="140" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption> - </caption>
+                </control>
+                <control name="5_Right" xpos="230" ypos="140" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption> - </caption>
+                </control>
+
+                <control name="6_Left" xpos="110" ypos="170" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption> - </caption>
+                </control>
+                <control name="6_Center" xpos="170" ypos="170" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption> - </caption>
+                </control>
+                <control name="6_Right" xpos="230" ypos="170" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption> - </caption>
+                </control>
+
+                <control name="7_Left" xpos="110" ypos="200" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption> - </caption>
+                </control>
+                <control name="7_Center" xpos="170" ypos="200" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption> - </caption>
+                </control>
+                <control name="7_Right" xpos="230" ypos="200" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption> - </caption>
+                </control>
+
+                <control name="8_Left" xpos="110" ypos="230" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption> - </caption>
+                </control>
+                <control name="8_Center" xpos="170" ypos="230" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption> - </caption>
+                </control>
+                <control name="8_Right" xpos="230" ypos="230" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption> - </caption>
+                </control>
+
+                <control name="9_Left" xpos="110" ypos="260" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption> - </caption>
+                </control>
+                <control name="9_Center" xpos="170" ypos="260" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption> - </caption>
+                </control>
+                <control name="9_Right" xpos="230" ypos="260" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption> - </caption>
+                </control>
+
+                <control name="10_Left" xpos="110" ypos="290" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption> - </caption>
+                </control>
+                <control name="10_Center" xpos="170" ypos="290" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption> - </caption>
+                </control>
+                <control name="10_Right" xpos="230" ypos="290" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption> - </caption>
+                </control>
+
+
+
+
+
+
+            <!-- Center -->
+                <!-- Remaining Distance-->
+                    <control name = "RD_Z" xpos = "350" ypos = "33" refvar="nck/Channel/GeometricAxis/actProgPos[1]" fieldtype="readonly" format="%9.3f" fontpixelsize = "12" time="superfast" />
+                    <control name = "RD_U1" xpos = "350" ypos = "53" refvar="nck/Channel/GeometricAxis/actProgPos[2]" fieldtype="readonly" format="%9.3f" fontpixelsize = "12" time="superfast" />
+                    <control name = "RD_W1" xpos = "350" ypos = "73" refvar="nck/Channel/GeometricAxis/actProgPos[3]" fieldtype="readonly" format="%9.3f" fontpixelsize = "12" time="superfast" />
+                    <control name = "RD_U2" xpos = "350" ypos = "93" refvar="nck/Channel/GeometricAxis/actProgPos[4]" fieldtype="readonly" format="%9.3f" fontpixelsize = "12" time="superfast" />
+                    <control name = "RD_W2" xpos = "350" ypos = "113" refvar="nck/Channel/GeometricAxis/actProgPos[5]" fieldtype="readonly" format="%9.3f" fontpixelsize = "12" time="superfast" />
+
+            <!-- Right -->
+                <!-- Machine Position-->
+                    <control name = "MP_Z" xpos = "470" ypos = "33" refvar="nck/Channel/GeometricAxis/actProgPos[1]" fieldtype="readonly" format="%9.3f" fontpixelsize = "12" time="superfast" />
+                    <control name = "MP_U1" xpos = "470" ypos = "53" refvar="nck/Channel/GeometricAxis/actProgPos[2]" fieldtype="readonly" format="%9.3f" fontpixelsize = "12" time="superfast" />
+                    <control name = "MP_W1" xpos = "470" ypos = "73" refvar="nck/Channel/GeometricAxis/actProgPos[3]" fieldtype="readonly" format="%9.3f" fontpixelsize = "12" time="superfast" />
+                    <control name = "MP_U2" xpos = "470" ypos = "93" refvar="nck/Channel/GeometricAxis/actProgPos[4]" fieldtype="readonly" format="%9.3f" fontpixelsize = "12" time="superfast" />
+                    <control name = "MP_W2" xpos = "470" ypos = "113" refvar="nck/Channel/GeometricAxis/actProgPos[5]" fieldtype="readonly" format="%9.3f" fontpixelsize = "12" time="superfast" />
+                <!-- WHEEL DIAMETER-->
+                    <control name = "WD_Now" xpos = "470" ypos = "193" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%8.2f" fontpixelsize = "12" time="superfast" />
+                    <control name = "WD_Worn" xpos = "470" ypos = "213" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.3f" fontpixelsize = "12" time="superfast" />
+                    <control name = "WD_Override" xpos = "470" ypos = "233" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.3f" fontpixelsize = "12" time="superfast" />
+                <!-- LOAD -->
+                    <control name = "Load_Z" xpos = "445" ypos = "282" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.0f" fontpixelsize = "12" time="superfast" />
+                    <control name = "Load_U1" xpos = "445" ypos = "302" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.0f" fontpixelsize = "12" time="superfast" />
+                    <control name = "Load_U2" xpos = "445" ypos = "322" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.0f" fontpixelsize = "12" time="superfast" />
+                    <control name = "Load_W1" xpos = "495" ypos = "302" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.0f" fontpixelsize = "12" time="superfast" />
+                    <control name = "Load_W2" xpos = "495" ypos = "322" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.0f" fontpixelsize = "12" time="superfast" />
+
+        </init>
+
+        <paint>
+            <BOX xpos = "0" ypos = "0" width = "590" height = "410" color = "#DCE6F1" />
+            <!-- Title Box -->
+
+            <!-- Left -->
+                    <text xpos = "20" ypos = "20" width="16" height="32" fontpixelsize = "10" > R/W  FEEDER %n(Z) POSITIONING </text>
+                    <text xpos = "20" ypos = "50" width="16" height="32" fontpixelsize = "10"> G/W  DRESSER %n(U1) POSITIONING </text>
+                    <text xpos = "20" ypos = "80" width="16" height="32" fontpixelsize = "10"> G/W DRESS TRAVELSE %n(W1) POSITIONING </text>
+                    <text xpos = "20" ypos = "110" width="16" height="32" fontpixelsize = "10">4 </text>
+                    <text xpos = "20" ypos = "140" width="16" height="32" fontpixelsize = "10"> R/W  DRESSER %n(U2) POSITIONING </text>
+                    <text xpos = "20" ypos = "170" width="16" height="32" fontpixelsize = "10"> R/W DRESS TRAVELSE %n(W2) POSITIONING </text>
+                    <text xpos = "20" ypos = "200" width="16" height="32" fontpixelsize = "10"> 7 </text>
+                    <text xpos = "20" ypos = "230" width="16" height="32" fontpixelsize = "10"> 8 </text>
+                    <text xpos = "20" ypos = "260" width="16" height="32" fontpixelsize = "10"> 9 </text>
+                    <text xpos = "20" ypos = "290" width="16" height="32" fontpixelsize = "10"> RING  FEEDER </text>
+
+            <!-- Center -->
+
+            <!-- Right -->
+                    <text xpos = "320" ypos = "35" width="16" height="32" fontpixelsize = "8">Z </text>
+                    <text xpos = "320" ypos = "55" width="16" height="32" fontpixelsize = "8">U1</text>
+                    <text xpos = "320" ypos = "75" width="16" height="32" fontpixelsize = "8">W1</text>
+                    <text xpos = "320" ypos = "95" width="16" height="32" fontpixelsize = "8">U2</text>
+                    <text xpos = "320" ypos = "115" width="16" height="32" fontpixelsize = "8">W2</text>
+
+                    <text xpos = "400" ypos = "35" width="26" height="16" fontpixelsize = "8">mm</text>
+                    <text xpos = "400" ypos = "55" width="26" height="16" fontpixelsize = "8">mm</text>
+                    <text xpos = "400" ypos = "75" width="26" height="16" fontpixelsize = "8">mm</text>
+                    <text xpos = "400" ypos = "95" width="26" height="16" fontpixelsize = "8">mm</text>
+                    <text xpos = "400" ypos = "115" width="26" height="16" fontpixelsize = "8">mm</text>
+
+                    <!-- MACHINE POSITION-->
+                    <text xpos = "440" ypos = "35" width="16" height="32" fontpixelsize = "8">Z </text>
+                    <text xpos = "440" ypos = "55" width="16" height="32" fontpixelsize = "8">U1</text>
+                    <text xpos = "440" ypos = "75" width="16" height="32" fontpixelsize = "8">W1</text>
+                    <text xpos = "440" ypos = "95" width="16" height="32" fontpixelsize = "8">U2</text>
+                    <text xpos = "440" ypos = "115" width="16" height="32" fontpixelsize = "8">W2</text>
+
+                    <text xpos = "520" ypos = "35" width="26" height="16" fontpixelsize = "8">mm</text>
+                    <text xpos = "520" ypos = "55" width="26" height="16" fontpixelsize = "8">mm</text>
+                    <text xpos = "520" ypos = "75" width="26" height="16" fontpixelsize = "8">mm</text>
+                    <text xpos = "520" ypos = "95" width="26" height="16" fontpixelsize = "8">mm</text>
+                    <text xpos = "520" ypos = "115" width="26" height="16" fontpixelsize = "8">mm</text>
+                <!-- WHEEL DIAMETER-->
+                    <text xpos = "440" ypos = "195" width="16" height="32" fontpixelsize = "8">NOW </text>
+                    <text xpos = "440" ypos = "215" width="16" height="32" fontpixelsize = "8">WORN</text>
+                    <text xpos = "440" ypos = "235" width="16" height="32" fontpixelsize = "8">OVERRIDE</text>
+
+                    <text xpos = "520" ypos = "195" width="16" height="32" fontpixelsize = "8">mΦ </text>
+                    <text xpos = "520" ypos = "215" width="16" height="32" fontpixelsize = "8">mΦ</text>
+                    <text xpos = "520" ypos = "235" width="16" height="32" fontpixelsize = "8">%</text>
+
+
+                <!-- LOAD -->
+                    <text xpos = "440" ypos = "285" width="16" height="32" fontpixelsize = "8">Z </text>
+                    <text xpos = "440" ypos = "305" width="16" height="32" fontpixelsize = "8">U1</text>
+                    <text xpos = "440" ypos = "325" width="16" height="32" fontpixelsize = "8">U2</text>
+
+                    <text xpos = "495" ypos = "305" width="16" height="32" fontpixelsize = "8">W1</text>
+                    <text xpos = "495" ypos = "325" width="16" height="32" fontpixelsize = "8">W2</text>
+
+        </paint>
+    </form>
+<!--Variables-->
+
+<!--Functions-->

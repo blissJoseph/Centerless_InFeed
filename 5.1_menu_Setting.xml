@@ -1,0 +1,102 @@
+<!-- Menu-->
+	<menu name="menu_Setting">
+		<OPEN_FORM name="Setting"/>
+
+		<softkey POSITION="1" >
+			<caption>Home</caption>
+			<navigation>menu_home</navigation>
+		</softkey>
+
+		<softkey POSITION="2" >
+			<caption>Auto</caption>
+			<navigation>menu_Auto</navigation>
+		</softkey>
+
+		<softkey POSITION="3" >
+			<caption>SemiAuto</caption>
+			<navigation>menu_SemiAuto</navigation>
+		</softkey>
+
+		<softkey POSITION="4" >
+			<caption>Manual</caption>
+			<navigation>menu_Manual</navigation>
+		</softkey>
+
+		<softkey POSITION="5" >
+			<caption>Setting</caption>
+			<navigation>menu_Setting</navigation>
+		</softkey>
+
+		<softkey POSITION="6" >
+			<caption>Maintenance</caption>
+			<navigation>menu_Maintenance</navigation>
+		</softkey>
+
+		<softkey_back>
+			<navigation>Main</navigation>
+		</softkey_back>
+
+		<softkey POSITION="9" >
+			<caption>CYCLE DATA</caption>
+			<navigation>menu_Setting</navigation>
+		</softkey>
+
+		<softkey POSITION="10" >
+			<caption>DRESSING DATA </caption>
+			<navigation>menu_DressingData</navigation>
+		</softkey>
+
+		<softkey POSITION="11" >
+			<caption>UTILITY DATA </caption>
+			<navigation>menu_UtilityData</navigation>
+		</softkey>
+
+		<softkey POSITION="12" >
+			<caption>TEACHING DATA </caption>
+			<navigation>menu_TeachingData</navigation>
+		</softkey>
+
+	</menu>
+
+
+<!--Form-->
+	<form name="Setting" color="#DCE6F1">
+		<init>
+
+			<!--Process Selection-->
+				<control name="Set_Process_Selection" xpos="20" ypos="10" width="120" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "12" fieldtype="pushbutton" >
+					<caption alignment= "left">Process Selection</caption>
+				</control>
+
+				<CONTROL name = "Set_restart_mode_selection_Checkbox1" xpos = "150" ypos = "10" width = "80" fieldtype = "checkbox"  fontpixelsize = "10" refvar = "nck/Channel/GeometricAxis/actProgPos[1]">
+					<caption>Normal process</caption>
+				</control>
+				<CONTROL name = "Set_restart_mode_selection_Checkbox2" xpos = "150" ypos = "30" width = "80" fieldtype = "checkbox" fontpixelsize = "10" refvar = "nck/Channel/GeometricAxis/actProgPos[1]">
+					<caption >Rework</caption>
+				</control>
+
+			<!--Forced Compensation -->
+				<control name="Set_forced_compensation" xpos="280" ypos="10" width="120" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "12" fieldtype="pushbutton" >
+					<caption alignment= "left">Forced Compensation</caption>
+				</control>
+
+				<control name="Force_Value1" xpos="410" ypos="10" width="35" height="20" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly"  format="%9.2f" fontpixelsize = "12" color_bk = "#FFFFFF"/>
+				<control name="Force_Value2" xpos="460" ypos="10" width="35" height="20" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly"  format="%9.2f" fontpixelsize = "12" color_bk = "#FFFFFF"/>
+
+
+		</init>
+
+		<paint>
+			<BOX xpos = "0" ypos = "0" width = "590" height = "410" color = "#DCE6F1" />
+			<!--Process Selection-->
+
+
+			<!--Forced Compensation -->
+					<text xpos = "445" ypos = "20" width="16" height="32" fontpixelsize = "8" > umΦ </text>
+					<text xpos = "490" ypos = "20" width="16" height="32" fontpixelsize = "8" > mm/min </text>
+
+
+		</paint>
+	</form>
+<!--Variables-->
+<!--Functions-->
