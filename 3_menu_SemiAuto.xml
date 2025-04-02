@@ -43,13 +43,17 @@
         <init>
             <!-- Title Box-->
 
-                <control name="Title_Machine_Position" xpos="440" ypos="10" width="100" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                <control name="Title_Warming-up_Cycle" xpos="300" ypos="10" width="115" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption>WARMING-UP CYCLE</caption>
+                </control>
+
+                <control name="Title_Machine_Position" xpos="440" ypos="10" width="115" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
                     <caption>MACHINE POSITION</caption>
                 </control>
-                <control name="Title_Weel_Diameter" xpos="440" ypos="170" width="100" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                <control name="Title_Weel_Diameter" xpos="440" ypos="170" width="115" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
                         <caption>WHEEL DIAMETER</caption>
                 </control>
-                <control name="Title_Load_Button" xpos="440" ypos="260" width="100" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                <control name="Title_Load_Button" xpos="440" ypos="260" width="115" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
                     <caption>LOAD</caption>
                 </control>
 
@@ -127,36 +131,39 @@
 
             <!--Center-->
 
+                    <control name = "WC_Value" xpos = "310" ypos = "35" refvar="nck/Channel/GeometricAxis/actProgPos[1]" fieldtype="readonly" format="%d" fontpixelsize = "12" time="superfast" />
+                    <control name = "WC_Total" xpos = "360" ypos = "35" refvar="nck/Channel/GeometricAxis/actProgPos[1]" fieldtype="readonly" format="%d" fontpixelsize = "12" time="superfast" />
+
                     <control name = "Rough1_Value" xpos = "310" ypos = "95" refvar="nck/Channel/GeometricAxis/actProgPos[1]" fieldtype="readonly" format="%d" fontpixelsize = "12" time="superfast" />
-                    <control name = "Rough1_Total" xpos = "330" ypos = "95" refvar="nck/Channel/GeometricAxis/actProgPos[1]" fieldtype="readonly" format="%d" fontpixelsize = "12" time="superfast" />
+                    <control name = "Rough1_Total" xpos = "350" ypos = "95" refvar="nck/Channel/GeometricAxis/actProgPos[1]" fieldtype="readonly" format="%d" fontpixelsize = "12" time="superfast" />
 
                     <control name = "Fine1_Value" xpos = "310" ypos = "135" refvar="nck/Channel/GeometricAxis/actProgPos[1]" fieldtype="readonly" format="%d" fontpixelsize = "12" time="superfast" />
-                    <control name = "Fine1_Total" xpos = "330" ypos = "135" refvar="nck/Channel/GeometricAxis/actProgPos[1]" fieldtype="readonly" format="%d" fontpixelsize = "12" time="superfast" />
+                    <control name = "Fine1_Total" xpos = "350" ypos = "135" refvar="nck/Channel/GeometricAxis/actProgPos[1]" fieldtype="readonly" format="%d" fontpixelsize = "12" time="superfast" />
 
                     <control name = "Rough2_Value" xpos = "310" ypos = "175" refvar="nck/Channel/GeometricAxis/actProgPos[1]" fieldtype="readonly" format="%d" fontpixelsize = "12" time="superfast" />
-                    <control name = "Rough2_Total" xpos = "330" ypos = "175" refvar="nck/Channel/GeometricAxis/actProgPos[1]" fieldtype="readonly" format="%d" fontpixelsize = "12" time="superfast" />
+                    <control name = "Rough2_Total" xpos = "350" ypos = "175" refvar="nck/Channel/GeometricAxis/actProgPos[1]" fieldtype="readonly" format="%d" fontpixelsize = "12" time="superfast" />
 
                     <control name = "Fine2_Value" xpos = "310" ypos = "215" refvar="nck/Channel/GeometricAxis/actProgPos[1]" fieldtype="readonly" format="%d" fontpixelsize = "12" time="superfast" />
-                    <control name = "Fine2_Total" xpos = "330" ypos = "215" refvar="nck/Channel/GeometricAxis/actProgPos[1]" fieldtype="readonly" format="%d" fontpixelsize = "12" time="superfast" />
+                    <control name = "Fine2_Total" xpos = "350" ypos = "215" refvar="nck/Channel/GeometricAxis/actProgPos[1]" fieldtype="readonly" format="%d" fontpixelsize = "12" time="superfast" />
 
 
             <!--Right-->
                 <!-- Machine Position-->
-                    <control name = "MP_Z" xpos = "470" ypos = "33" refvar="nck/Channel/GeometricAxis/actProgPos[1]" fieldtype="readonly" format="%9.3f" fontpixelsize = "12" time="superfast" />
-                    <control name = "MP_U1" xpos = "470" ypos = "53" refvar="nck/Channel/GeometricAxis/actProgPos[2]" fieldtype="readonly" format="%9.3f" fontpixelsize = "12" time="superfast" />
-                    <control name = "MP_W1" xpos = "470" ypos = "73" refvar="nck/Channel/GeometricAxis/actProgPos[3]" fieldtype="readonly" format="%9.3f" fontpixelsize = "12" time="superfast" />
-                    <control name = "MP_U2" xpos = "470" ypos = "93" refvar="nck/Channel/GeometricAxis/actProgPos[4]" fieldtype="readonly" format="%9.3f" fontpixelsize = "12" time="superfast" />
-                    <control name = "MP_W2" xpos = "470" ypos = "113" refvar="nck/Channel/GeometricAxis/actProgPos[5]" fieldtype="readonly" format="%9.3f" fontpixelsize = "12" time="superfast" />
+                    <control name = "MP_Z" xpos = "480" ypos = "33" refvar="nck/Channel/GeometricAxis/actProgPos[1]" fieldtype="readonly" format="%9.3f" fontpixelsize = "12" time="superfast" />
+                    <control name = "MP_U1" xpos = "480" ypos = "53" refvar="nck/Channel/GeometricAxis/actProgPos[2]" fieldtype="readonly" format="%9.3f" fontpixelsize = "12" time="superfast" />
+                    <control name = "MP_W1" xpos = "480" ypos = "73" refvar="nck/Channel/GeometricAxis/actProgPos[3]" fieldtype="readonly" format="%9.3f" fontpixelsize = "12" time="superfast" />
+                    <control name = "MP_U2" xpos = "480" ypos = "93" refvar="nck/Channel/GeometricAxis/actProgPos[4]" fieldtype="readonly" format="%9.3f" fontpixelsize = "12" time="superfast" />
+                    <control name = "MP_W2" xpos = "480" ypos = "113" refvar="nck/Channel/GeometricAxis/actProgPos[5]" fieldtype="readonly" format="%9.3f" fontpixelsize = "12" time="superfast" />
                 <!-- WHEEL DIAMETER-->
-                    <control name = "WD_Now" xpos = "470" ypos = "193" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%8.2f" fontpixelsize = "12" time="superfast" />
-                    <control name = "WD_Worn" xpos = "470" ypos = "213" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.3f" fontpixelsize = "12" time="superfast" />
-                    <control name = "WD_Override" xpos = "470" ypos = "233" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.3f" fontpixelsize = "12" time="superfast" />
+                    <control name = "WD_Now" xpos = "480" ypos = "193" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%8.2f" fontpixelsize = "12" time="superfast" />
+                    <control name = "WD_Worn" xpos = "480" ypos = "213" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.3f" fontpixelsize = "12" time="superfast" />
+                    <control name = "WD_Override" xpos = "480" ypos = "233" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.3f" fontpixelsize = "12" time="superfast" />
                 <!-- LOAD -->
-                    <control name = "Load_Z" xpos = "445" ypos = "282" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.0f" fontpixelsize = "12" time="superfast" />
-                    <control name = "Load_U1" xpos = "445" ypos = "302" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.0f" fontpixelsize = "12" time="superfast" />
-                    <control name = "Load_U2" xpos = "445" ypos = "322" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.0f" fontpixelsize = "12" time="superfast" />
-                    <control name = "Load_W1" xpos = "495" ypos = "302" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.0f" fontpixelsize = "12" time="superfast" />
-                    <control name = "Load_W2" xpos = "495" ypos = "322" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.0f" fontpixelsize = "12" time="superfast" />
+                    <control name = "Load_Z" xpos = "455" ypos = "282" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.0f" fontpixelsize = "12" time="superfast" />
+                    <control name = "Load_U1" xpos = "455" ypos = "302" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.0f" fontpixelsize = "12" time="superfast" />
+                    <control name = "Load_U2" xpos = "455" ypos = "322" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.0f" fontpixelsize = "12" time="superfast" />
+                    <control name = "Load_W1" xpos = "505" ypos = "302" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.0f" fontpixelsize = "12" time="superfast" />
+                    <control name = "Load_W2" xpos = "505" ypos = "322" refvar="nck/Channel/GeometricAxis/ actProgPos[1]"  fieldtype="readonly" format="%9.0f" fontpixelsize = "12" time="superfast" />
 
         </init>
 
@@ -164,65 +171,68 @@
             <BOX xpos = "0" ypos = "0" width = "590" height = "410" color = "#DCE6F1" />
 
             <!--Left-->
-                    <text xpos = "20" ypos = "20" width="16" height="32" fontpixelsize = "10" >1 </text>
-                    <text xpos = "20" ypos = "50" width="16" height="32" fontpixelsize = "10">2 </text>
-                    <text xpos = "20" ypos = "80" width="16" height="32" fontpixelsize = "10">GRIND WHEEL %nDRESSING </text>
+                    <text xpos = "20" ypos = "20" width="16" height="32" fontpixelsize = "10" > CYCLE </text>
+                    <text xpos = "20" ypos = "50" width="16" height="32" fontpixelsize = "10"> 2 </text>
+                    <text xpos = "20" ypos = "80" width="16" height="32" fontpixelsize = "10"> GRIND WHEEL %nDRESSING </text>
                     <text xpos = "20" ypos = "110" width="16" height="32" fontpixelsize = "10">4 </text>
-                    <text xpos = "20" ypos = "140" width="16" height="32" fontpixelsize = "10">REGULATING  WHEEL %nDRESSING </text>
-                    <text xpos = "20" ypos = "170" width="16" height="32" fontpixelsize = "10">6 </text>
-                    <text xpos = "20" ypos = "200" width="16" height="32" fontpixelsize = "10">7 </text>
-                    <text xpos = "20" ypos = "230" width="16" height="32" fontpixelsize = "10">8 </text>
-                    <text xpos = "20" ypos = "260" width="16" height="32" fontpixelsize = "10">9 </text>
-                    <text xpos = "20" ypos = "290" width="16" height="32" fontpixelsize = "10">10 </text>
+                    <text xpos = "20" ypos = "140" width="16" height="32" fontpixelsize = "10"> REGULATING  WHEEL %nDRESSING </text>
+                    <text xpos = "20" ypos = "170" width="16" height="32" fontpixelsize = "10"> 6 </text>
+                    <text xpos = "20" ypos = "200" width="16" height="32" fontpixelsize = "10"> 7 </text>
+                    <text xpos = "20" ypos = "230" width="16" height="32" fontpixelsize = "10"> 8 </text>
+                    <text xpos = "20" ypos = "260" width="16" height="32" fontpixelsize = "10"> WORK %nLOADING </text>
+                    <text xpos = "20" ypos = "290" width="16" height="32" fontpixelsize = "10"> NEW WHEEL %nCHANGE </text>
 
             <!--Center-->
                 <!--WARMING-UP CYCLE-->
+                    <text xpos = "345" ypos = "35" width="16" height="32" fontpixelsize = "10" > / </text>
+                    <text xpos = "400" ypos = "35" width="16" height="32" fontpixelsize = "8.5" >min </text>
+
                     <text xpos = "310" ypos = "80" width="16" height="32" fontpixelsize = "10" >ROUGH </text>
-                    <text xpos = "320" ypos = "95" width="16" height="32" fontpixelsize = "10" > / </text>
-                    <text xpos = "350" ypos = "100" width="16" height="32" fontpixelsize = "8" >TIMES </text>
+                    <text xpos = "335" ypos = "95" width="16" height="32" fontpixelsize = "10" > / </text>
+                    <text xpos = "380" ypos = "100" width="16" height="32" fontpixelsize = "8.5" >TIMES </text>
 
                     <text xpos = "310" ypos = "120" width="16" height="32" fontpixelsize = "10">FINE</text>
-                    <text xpos = "320" ypos = "135" width="16" height="32" fontpixelsize = "10"> / </text>
-                    <text xpos = "350" ypos = "140" width="16" height="32" fontpixelsize = "8">TIMES</text>
+                    <text xpos = "335" ypos = "135" width="16" height="32" fontpixelsize = "10"> / </text>
+                    <text xpos = "380" ypos = "140" width="16" height="32" fontpixelsize = "8.5">TIMES</text>
 
                     <text xpos = "310" ypos = "160" width="16" height="32" fontpixelsize = "10" >ROUGH </text>
-                    <text xpos = "320" ypos = "175" width="16" height="32" fontpixelsize = "10" > / </text>
-                    <text xpos = "350" ypos = "180" width="16" height="32" fontpixelsize = "8" >TIMES </text>
+                    <text xpos = "335" ypos = "175" width="16" height="32" fontpixelsize = "10" > / </text>
+                    <text xpos = "380" ypos = "180" width="16" height="32" fontpixelsize = "8.5" >TIMES </text>
 
                     <text xpos = "310" ypos = "200" width="16" height="32" fontpixelsize = "10">FINE </text>
-                    <text xpos = "320" ypos = "215" width="16" height="32" fontpixelsize = "10"> / </text>
-                    <text xpos = "350" ypos = "220" width="16" height="32" fontpixelsize = "8">TIMES </text>
+                    <text xpos = "335" ypos = "215" width="16" height="32" fontpixelsize = "10"> / </text>
+                    <text xpos = "380" ypos = "220" width="16" height="32" fontpixelsize = "8.5">TIMES </text>
 
             <!--Right-->
-                    <!-- MACHINE POSITION-->
-                    <text xpos = "440" ypos = "35" width="16" height="32" fontpixelsize = "8">Z </text>
-                    <text xpos = "440" ypos = "55" width="16" height="32" fontpixelsize = "8">U1</text>
-                    <text xpos = "440" ypos = "75" width="16" height="32" fontpixelsize = "8">W1</text>
-                    <text xpos = "440" ypos = "95" width="16" height="32" fontpixelsize = "8">U2</text>
-                    <text xpos = "440" ypos = "115" width="16" height="32" fontpixelsize = "8">W2</text>
+                <!-- MACHINE POSITION-->
+                    <text xpos = "445" ypos = "35" width="16" height="32" fontpixelsize = "8.5">Z </text>
+                    <text xpos = "445" ypos = "55" width="16" height="32" fontpixelsize = "8.5">U1</text>
+                    <text xpos = "445" ypos = "75" width="16" height="32" fontpixelsize = "8.5">W1</text>
+                    <text xpos = "445" ypos = "95" width="16" height="32" fontpixelsize = "8.5">U2</text>
+                    <text xpos = "445" ypos = "115" width="16" height="32" fontpixelsize = "8.5">W2</text>
 
-                    <text xpos = "520" ypos = "35" width="26" height="16" fontpixelsize = "8">mm</text>
-                    <text xpos = "520" ypos = "55" width="26" height="16" fontpixelsize = "8">mm</text>
-                    <text xpos = "520" ypos = "75" width="26" height="16" fontpixelsize = "8">mm</text>
-                    <text xpos = "520" ypos = "95" width="26" height="16" fontpixelsize = "8">mm</text>
-                    <text xpos = "520" ypos = "115" width="26" height="16" fontpixelsize = "8">mm</text>
+                    <text xpos = "540" ypos = "35" width="26" height="16" fontpixelsize = "8.5">mm</text>
+                    <text xpos = "540" ypos = "55" width="26" height="16" fontpixelsize = "8.5">mm</text>
+                    <text xpos = "540" ypos = "75" width="26" height="16" fontpixelsize = "8.5">mm</text>
+                    <text xpos = "540" ypos = "95" width="26" height="16" fontpixelsize = "8.5">mm</text>
+                    <text xpos = "540" ypos = "115" width="26" height="16" fontpixelsize = "8.5">mm</text>
                 <!-- WHEEL DIAMETER-->
-                    <text xpos = "440" ypos = "195" width="16" height="32" fontpixelsize = "8">NOW </text>
-                    <text xpos = "440" ypos = "215" width="16" height="32" fontpixelsize = "8">WORN</text>
-                    <text xpos = "440" ypos = "235" width="16" height="32" fontpixelsize = "8">OVERRIDE</text>
+                    <text xpos = "445" ypos = "195" width="16" height="32" fontpixelsize = "8.5">NOW </text>
+                    <text xpos = "445" ypos = "215" width="16" height="32" fontpixelsize = "8.5">WORN</text>
+                    <text xpos = "445" ypos = "235" width="16" height="32" fontpixelsize = "8.5">OVERRIDE</text>
 
-                    <text xpos = "520" ypos = "195" width="16" height="32" fontpixelsize = "8">mΦ </text>
-                    <text xpos = "520" ypos = "215" width="16" height="32" fontpixelsize = "8">mΦ</text>
-                    <text xpos = "520" ypos = "235" width="16" height="32" fontpixelsize = "8">%</text>
+                    <text xpos = "540" ypos = "195" width="16" height="32" fontpixelsize = "8.5">mΦ </text>
+                    <text xpos = "540" ypos = "215" width="16" height="32" fontpixelsize = "8.5">mΦ</text>
+                    <text xpos = "540" ypos = "235" width="16" height="32" fontpixelsize = "8.5">%</text>
 
 
                 <!-- LOAD -->
-                    <text xpos = "440" ypos = "285" width="16" height="32" fontpixelsize = "8">Z </text>
-                    <text xpos = "440" ypos = "305" width="16" height="32" fontpixelsize = "8">U1</text>
-                    <text xpos = "440" ypos = "325" width="16" height="32" fontpixelsize = "8">U2</text>
+                    <text xpos = "445" ypos = "285" width="16" height="32" fontpixelsize = "8.5">Z </text>
+                    <text xpos = "445" ypos = "305" width="16" height="32" fontpixelsize = "8.5">U1</text>
+                    <text xpos = "445" ypos = "325" width="16" height="32" fontpixelsize = "8.5">U2</text>
 
-                    <text xpos = "495" ypos = "305" width="16" height="32" fontpixelsize = "8">W1</text>
-                    <text xpos = "495" ypos = "325" width="16" height="32" fontpixelsize = "8">W2</text>
+                    <text xpos = "500" ypos = "305" width="16" height="32" fontpixelsize = "8.5">W1</text>
+                    <text xpos = "500" ypos = "325" width="16" height="32" fontpixelsize = "8.5">W2</text>
 
         </paint>
     </form>
