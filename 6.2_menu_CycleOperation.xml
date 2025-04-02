@@ -1,0 +1,104 @@
+<!--Menu-->
+	<menu name="menu_CycleOperationParameter">
+				<OPEN_FORM name="CycleOperationParameter"/>
+
+		<softkey POSITION="1" >
+			<caption>Home</caption>
+			<navigation>menu_home</navigation>
+		</softkey>
+
+		<softkey POSITION="2" >
+			<caption>Auto</caption>
+			<navigation>menu_Auto</navigation>
+		</softkey>
+
+		<softkey POSITION="3" >
+			<caption>SemiAuto</caption>
+			<navigation>menu_SemiAuto</navigation>
+		</softkey>
+
+		<softkey POSITION="4" >
+			<caption>Manual</caption>
+			<navigation>menu_Manual</navigation>
+		</softkey>
+
+		<softkey POSITION="5" >
+			<caption>Setting</caption>
+			<navigation>menu_Setting</navigation>
+		</softkey>
+
+		<softkey POSITION="6" >
+			<caption>Maintenance</caption>
+			<navigation>menu_Maintenance</navigation>
+		</softkey>
+
+		<softkey_back>
+			<navigation>Main</navigation>
+		</softkey_back>
+
+		<softkey POSITION="9" >
+			<caption>REFERANCE  AXIS  SET-UP</caption>
+			<navigation>menu_Maintenance</navigation>
+		</softkey>
+
+		<softkey POSITION="10" >
+			<caption>CYCLE  OPERATION  PARAMETER </caption>
+			<navigation>menu_CycleOperationParameter</navigation>
+		</softkey>
+
+		<softkey POSITION="11" >
+			<caption>SPINDLE PARAMETER </caption>
+			<navigation>menu_SpindleParameter</navigation>
+		</softkey>
+
+	</menu>
+<!--Form-->
+	<form name="CycleOperationParameter" color="#DCE6F1">
+		<init>
+			<CONTROL name="Checkbox01" xpos="080" ypos="030" width="023" fieldtype="checkbox" refvar="gud/nck/mgud/_ORS[262]" />
+			<CONTROL name="Checkbox02" xpos="080" ypos="060" width="023" fieldtype="checkbox" refvar="gud/nck/mgud/_ORS[262]" />
+			<CONTROL name="Checkbox03" xpos="080" ypos="090" width="023" fieldtype="checkbox" refvar="gud/nck/mgud/_ORS[262]" />
+			<CONTROL name="Checkbox04" xpos="080" ypos="120" width="023" fieldtype="checkbox" refvar="gud/nck/mgud/_ORS[262]" />
+			<CONTROL name="Checkbox05" xpos="080" ypos="150" width="023" fieldtype="checkbox" refvar="gud/nck/mgud/_ORS[262]" />
+			<CONTROL name="Checkbox06" xpos="080" ypos="180" width="023" fieldtype="checkbox" refvar="gud/nck/mgud/_ORS[262]" />
+			<CONTROL name="Checkbox07" xpos="080" ypos="210" width="023" fieldtype="checkbox" refvar="gud/nck/mgud/_ORS[262]" />
+			<CONTROL name="Checkbox08" xpos="080" ypos="240" width="023" fieldtype="checkbox" refvar="gud/nck/mgud/_ORS[262]" />
+
+			<CONTROL name="Checkbox09" xpos="320" ypos="030" width="023" fieldtype="checkbox" refvar="gud/nck/mgud/_ORS[262]" />
+			<CONTROL name="Checkbox10" xpos="320" ypos="060" width="023" fieldtype="checkbox" refvar="gud/nck/mgud/_ORS[262]" />
+			<CONTROL name="Checkbox11" xpos="320" ypos="090" width="023" fieldtype="checkbox" refvar="gud/nck/mgud/_ORS[262]" />
+			<CONTROL name="Checkbox12" xpos="320" ypos="120" width="023" fieldtype="checkbox" refvar="gud/nck/mgud/_ORS[262]" />
+			<CONTROL name="Checkbox13" xpos="320" ypos="150" width="023" fieldtype="checkbox" refvar="gud/nck/mgud/_ORS[262]" />
+			<CONTROL name="Checkbox14" xpos="320" ypos="180" width="023" fieldtype="checkbox" refvar="gud/nck/mgud/_ORS[262]" />
+			<CONTROL name="Checkbox15" xpos="320" ypos="210" width="023" fieldtype="checkbox" refvar="gud/nck/mgud/_ORS[262]" />
+			<CONTROL name="Checkbox16" xpos="320" ypos="240" width="023" fieldtype="checkbox" refvar="gud/nck/mgud/_ORS[262]" />
+
+		</init>
+
+		<paint>
+			<BOX xpos="0" ypos="0" width="590" height="410" color="#DCE6F1" />
+			
+			<text xpos="100" ypos="035" width="070" height="20" fontpixelsize="12" color_bk="#FFFFFF"> Single block applied </text>
+			<text xpos="100" ypos="065" width="070" height="20" fontpixelsize="12" color_bk="#FFFFFF"> Enable Auto cycle without work-piece </text>
+			<text xpos="100" ypos="095" width="070" height="20" fontpixelsize="12" color_bk="#FFFFFF"> Ignore Coolant action detection </text>
+			<text xpos="100" ypos="125" width="070" height="20" fontpixelsize="12" color_bk="#FFFFFF"> Reserved </text>
+			<text xpos="100" ypos="155" width="070" height="20" fontpixelsize="12" color_bk="#FFFFFF"> Reserved </text>
+			<text xpos="100" ypos="185" width="070" height="20" fontpixelsize="12" color_bk="#FFFFFF"> Reserved </text>
+			<text xpos="100" ypos="215" width="070" height="20" fontpixelsize="12" color_bk="#FFFFFF"> Reserved </text>
+			<text xpos="100" ypos="245" width="070" height="20" fontpixelsize="12" color_bk="#FFFFFF"> Reserved </text>
+
+			<text xpos="340" ypos="035" width="070" height="20" fontpixelsize="12" color_bk="#FFFFFF"> Reserved </text>
+			<text xpos="340" ypos="065" width="070" height="20" fontpixelsize="12" color_bk="#FFFFFF"> Reserved </text>
+			<text xpos="340" ypos="095" width="070" height="20" fontpixelsize="12" color_bk="#FFFFFF"> Reserved </text>
+			<text xpos="340" ypos="125" width="070" height="20" fontpixelsize="12" color_bk="#FFFFFF"> Reserved </text>
+			<text xpos="340" ypos="155" width="070" height="20" fontpixelsize="12" color_bk="#FFFFFF"> Reserved </text>
+			<text xpos="340" ypos="185" width="070" height="20" fontpixelsize="12" color_bk="#FFFFFF"> Reserved </text>
+			<text xpos="340" ypos="215" width="070" height="20" fontpixelsize="12" color_bk="#FFFFFF"> Reserved </text>
+			<text xpos="340" ypos="245" width="070" height="20" fontpixelsize="12" color_bk="#FFFFFF"> Reserved </text>
+
+		</paint>
+	</form>
+
+<!--Variables-->
+
+<!--Functions-->

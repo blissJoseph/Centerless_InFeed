@@ -1,0 +1,95 @@
+<!--Menu-->
+	<menu name="menu_SpindleParameter">
+		<OPEN_FORM name="SpindleParameter"/>
+
+		<softkey POSITION="1" >
+			<caption>Home</caption>
+			<navigation>menu_home</navigation>
+		</softkey>
+
+		<softkey POSITION="2" >
+			<caption>Auto</caption>
+			<navigation>menu_Auto</navigation>
+		</softkey>
+
+		<softkey POSITION="3" >
+			<caption>SemiAuto</caption>
+			<navigation>menu_SemiAuto</navigation>
+		</softkey>
+
+		<softkey POSITION="4" >
+			<caption>Manual</caption>
+			<navigation>menu_Manual</navigation>
+		</softkey>
+
+		<softkey POSITION="5" >
+			<caption>Setting</caption>
+			<navigation>menu_Setting</navigation>
+		</softkey>
+
+		<softkey POSITION="6" >
+			<caption>Maintenance</caption>
+			<navigation>menu_Maintenance</navigation>
+		</softkey>
+
+		<softkey_back>
+			<navigation>Main</navigation>
+		</softkey_back>
+
+		<softkey POSITION="9" >
+			<caption>REFERANCE  AXIS  SET-UP</caption>
+			<navigation>menu_Maintenance</navigation>
+		</softkey>
+
+		<softkey POSITION="10" >
+			<caption>CYCLE  OPERATION  PARAMETER </caption>
+			<navigation>menu_CycleOperationParameter</navigation>
+		</softkey>
+
+		<softkey POSITION="11" >
+			<caption>SPINDLE PARAMETER </caption>
+			<navigation>menu_SpindleParameter</navigation>
+		</softkey>
+
+	</menu>
+<!--Form-->
+	<form name="SpindleParameter" color="#DCE6F1">
+		<init>
+
+			<control name="GW_Spindle" xpos="230" ypos="050" width="60" height="20" refvar="gud/nck/mgud/_ORS[262]" fieldtype="edit" format="%9.f" fontpixelsize="12"  />
+			<control name="RW_Spindle" xpos="230" ypos="080" width="60" height="20" refvar="gud/nck/mgud/_ORS[262]" fieldtype="edit" format="%9.f" fontpixelsize="12"  />
+			<control name="RingFeed_"  xpos="230" ypos="110" width="60" height="20" refvar="gud/nck/mgud/_ORS[262]" fieldtype="edit" format="%9.f" fontpixelsize="12"  />
+
+
+			<CONTROL name="GW_Spindle_CW"  xpos="360" ypos="050" width="020" height="20" fieldtype="checkbox"  fontpixelsize="12" refvar="gud/nck/mgud/_ORS[262]" />
+			<CONTROL name="RW_Spindle_CW"  xpos="360" ypos="080" width="020" height="20" fieldtype="checkbox"  fontpixelsize="12" refvar="gud/nck/mgud/_ORS[262]" />
+			<CONTROL name="RingFeed_CW"    xpos="360" ypos="110" width="020" height="20" fieldtype="checkbox"  fontpixelsize="12" refvar="gud/nck/mgud/_ORS[262]" />
+
+			<CONTROL name="GW_Spindle_CCW" xpos="430" ypos="050" width="020" height="20" fieldtype="checkbox"  fontpixelsize="12" refvar="gud/nck/mgud/_ORS[262]" />
+			<CONTROL name="RW_Spindle_CCW" xpos="430" ypos="080" width="020" height="20" fieldtype="checkbox"  fontpixelsize="12" refvar="gud/nck/mgud/_ORS[262]" />
+			<CONTROL name="RingFeed_CCW"   xpos="430" ypos="110" width="020" height="20" fieldtype="checkbox"  fontpixelsize="12" refvar="gud/nck/mgud/_ORS[262]" />
+
+		</init>
+
+		<paint>
+
+			<text xpos="100" ypos="055" width="070" height="20" fontpixelsize="12" color_bk="#FFFFFF"> G/W Spindle </text>
+			<text xpos="100" ypos="085" width="070" height="20" fontpixelsize="12" color_bk="#FFFFFF"> R/W Spindle </text>
+			<text xpos="100" ypos="115" width="070" height="20" fontpixelsize="12" color_bk="#FFFFFF"> Ring Feeder </text>
+
+			<text xpos="290" ypos="055" width="070" height="20" fontpixelsize="12" color_bk="#FFFFFF"> Rpm </text>
+			<text xpos="290" ypos="085" width="070" height="20" fontpixelsize="12" color_bk="#FFFFFF"> Rpm </text>
+			<text xpos="290" ypos="115" width="070" height="20" fontpixelsize="12" color_bk="#FFFFFF"> Rpm </text>
+
+			<text xpos="380" ypos="055" width="050" height="20" fontpixelsize="12" color_bk="#FFFFFF"> C.W   </text>
+			<text xpos="380" ypos="085" width="050" height="20" fontpixelsize="12" color_bk="#FFFFFF"> C.W   </text>
+			<text xpos="380" ypos="115" width="050" height="20" fontpixelsize="12" color_bk="#FFFFFF"> C.W   </text>
+
+			<text xpos="450" ypos="055" width="050" height="20" fontpixelsize="12" color_bk="#FFFFFF"> C.C.W </text>
+			<text xpos="450" ypos="085" width="050" height="20" fontpixelsize="12" color_bk="#FFFFFF"> C.C.W </text>
+			<text xpos="450" ypos="115" width="050" height="20" fontpixelsize="12" color_bk="#FFFFFF"> C.C.W </text>
+
+		</paint>
+	</form>
+<!--Variables-->
+<!--Functions-->

@@ -196,12 +196,12 @@
                     <text xpos = "440" ypos = "165" width="70" height="20" fontpixelsize = "7" color_bk = "#FFFFFF"> mm </text>
                     <text xpos = "511" ypos = "165" width="70" height="20" fontpixelsize = "7" color_bk = "#FFFFFF"> mm </text>
 
-                    <text xpos = "156" ypos = "185" width="70" height="20" fontpixelsize = "7" color_bk = "#FFFFFF"> mm </text>
-                    <text xpos = "220" ypos = "185" width="70" height="20" fontpixelsize = "7" color_bk = "#FFFFFF"> - </text>
-                    <text xpos = "291" ypos = "185" width="70" height="20" fontpixelsize = "7" color_bk = "#FFFFFF"> - </text>
-                    <text xpos = "362" ypos = "185" width="70" height="20" fontpixelsize = "7" color_bk = "#FFFFFF"> - </text>
-                    <text xpos = "433" ypos = "185" width="70" height="20" fontpixelsize = "7" color_bk = "#FFFFFF"> - </text>
-                    <text xpos = "504" ypos = "185" width="70" height="20" fontpixelsize = "7" color_bk = "#FFFFFF"> - </text>
+                    <text xpos = "136" ypos = "185" width="70" height="20" fontpixelsize = "7" color_bk = "#FFFFFF"> mm </text>
+                    <text xpos = "207" ypos = "185" width="70" height="20" fontpixelsize = "7" color_bk = "#FFFFFF"> - </text>
+                    <text xpos = "278" ypos = "185" width="70" height="20" fontpixelsize = "7" color_bk = "#FFFFFF"> - </text>
+                    <text xpos = "349" ypos = "185" width="70" height="20" fontpixelsize = "7" color_bk = "#FFFFFF"> - </text>
+                    <text xpos = "420" ypos = "185" width="70" height="20" fontpixelsize = "7" color_bk = "#FFFFFF"> - </text>
+                    <text xpos = "491" ypos = "185" width="70" height="20" fontpixelsize = "7" color_bk = "#FFFFFF"> - </text>
 
             <!-- Table, Regulating Wheel -->
                 <BOX xpos = "29" ypos = "249" width = "498" height = "81" color = "#000000" />

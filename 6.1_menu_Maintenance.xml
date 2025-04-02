@@ -1,0 +1,128 @@
+<!--Menu-->
+	<menu name="menu_Maintenance">
+		<OPEN_FORM name="Maintenance"/>
+
+		<softkey POSITION="1" >
+			<caption>Home</caption>
+			<navigation>menu_home</navigation>
+		</softkey>
+
+		<softkey POSITION="2" >
+			<caption>Auto</caption>
+			<navigation>menu_Auto</navigation>
+		</softkey>
+
+		<softkey POSITION="3" >
+			<caption>SemiAuto</caption>
+			<navigation>menu_SemiAuto</navigation>
+		</softkey>
+
+		<softkey POSITION="4" >
+			<caption>Manual</caption>
+			<navigation>menu_Manual</navigation>
+		</softkey>
+
+		<softkey POSITION="5" >
+			<caption>Setting</caption>
+			<navigation>menu_Setting</navigation>
+		</softkey>
+
+		<softkey POSITION="6" >
+			<caption>Maintenance</caption>
+			<navigation>menu_Maintenance</navigation>
+		</softkey>
+
+		<softkey_back>
+			<navigation>Main</navigation>
+		</softkey_back>	
+		
+		<softkey POSITION="9" >
+			<caption>REFERANCE  AXIS  SET-UP</caption>
+			<navigation>menu_Maintenance</navigation>
+		</softkey>
+
+		<softkey POSITION="10" >
+			<caption>CYCLE  OPERATION  PARAMETER </caption>
+			<navigation>menu_CycleOperationParameter</navigation>
+		</softkey>
+
+		<softkey POSITION="11" >
+			<caption>SPINDLE PARAMETER </caption>
+			<navigation>menu_SpindleParameter</navigation>
+		</softkey>
+
+	</menu>
+<!--Form-->
+	<form name="Maintenance" color="#DCE6F1">
+		<init>
+			<data_access type="true" />
+			<REQUEST name = "set_change" function="event_change"/>
+
+			<control name="Z1" xpos="350" ypos="030" width="59" height="19" refvar="nck/Channel/GeometricAxis/actProgPos[1]" fieldtype="readonly" hotlink="true" format="%9.3f" fontpixelsize = "12" >
+			</control>
+			<control name="U1" xpos="350" ypos="060" width="59" height="19" refvar="nck/Channel/GeometricAxis/actProgPos[2]" fieldtype="readonly" hotlink="true" format="%9.3f" fontpixelsize = "12" >
+			</control>
+			<control name="W1" xpos="350" ypos="090" width="59" height="19" refvar="nck/Channel/GeometricAxis/actProgPos[3]" fieldtype="readonly" hotlink="true" format="%9.3f" fontpixelsize = "12" >
+			</control>
+			<control name="U2" xpos="350" ypos="120" width="59" height="19" refvar="nck/Channel/GeometricAxis/actProgPos[4]" fieldtype="readonly" hotlink="true" format="%9.3f" fontpixelsize = "12" >
+			</control>
+			<control name="W2" xpos="350" ypos="150" width="59" height="19" refvar="nck/Channel/GeometricAxis/actProgPos[5]" fieldtype="readonly" hotlink="true" format="%9.3f" fontpixelsize = "12" >
+			</control>
+
+
+			<control name="Ref_Z1" xpos="420" ypos="030" width="50" height="20" refvar="$MA_ENC_REFP_STATE[0,1]" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "12" fieldtype="readonly" >
+				<property min = "1" />
+				<property max = "2" />
+			</control>
+			<control name="Ref_U1" xpos="420" ypos="060" width="50" height="20" refvar="$MA_ENC_REFP_STATE[0,2]" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "12" fieldtype="readonly" >
+				<property min = "1" />
+				<property max = "2" />
+			</control>
+			<control name="Ref_U2" xpos="420" ypos="090" width="50" height="20" refvar="$MA_ENC_REFP_STATE[0,3]" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "12" fieldtype="readonly" >
+				<property min = "1" />
+				<property max = "2" />
+			</control>
+			<control name="Ref_W1" xpos="420" ypos="120" width="50" height="20" refvar="$MA_ENC_REFP_STATE[0,4]" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "12" fieldtype="readonly" >
+				<property min = "1" />
+				<property max = "2" />
+			</control>
+			<control name="Ref_W2" xpos="420" ypos="150" width="50" height="20" refvar="$MA_ENC_REFP_STATE[0,5]" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "12" fieldtype="readonly" >
+				<property min = "1" />
+				<property max = "2" />
+			</control>
+	
+			<control name="CHANGE" xpos="350" ypos="180" width="50" height="20" fontpixelsize = "12" fieldtype="pushbutton" refvar="set_change" >
+				<caption> CHANGE</caption>
+			</control>
+
+			<control name="CHANGE_00" xpos="350" ypos="250" width="50" height="30" fontpixelsize = "12" fieldtype="pushbutton" refvar="set_change_00" function = "handler_00">
+				<caption> CHANGE</caption>
+			</control>
+			
+
+
+		</init>
+
+		<paint>
+			<BOX xpos = "0" ypos = "0" width = "590" height = "410" color = "#DCE6F1" />
+
+			<text xpos = "120" ypos = "030" width="70" height="20" fontpixelsize = "12" color_bk = "#FFFFFF"> Z-Axis Refrance postion </text>
+			<text xpos = "120" ypos = "060" width="70" height="20" fontpixelsize = "12" color_bk = "#FFFFFF"> U1-Axis Refrance postion </text>
+			<text xpos = "120" ypos = "090" width="70" height="20" fontpixelsize = "12" color_bk = "#FFFFFF"> W1-Axis Refrance postion </text>
+			<text xpos = "120" ypos = "120" width="70" height="20" fontpixelsize = "12" color_bk = "#FFFFFF"> U2-Axis Refrance postion </text>
+			<text xpos = "120" ypos = "150" width="70" height="20" fontpixelsize = "12" color_bk = "#FFFFFF"> W2-Axis Refrance postion </text>
+
+			<text xpos = "120" ypos = "230" width="70" height="20" fontpixelsize = "12" color_bk = "#FFFFFF"> Z-Axis Refrance postion </text>
+
+
+		</paint>
+	</form>
+
+<!--Variables-->
+	<let name="set_change" ></let>
+	<let name="set_change_00" ></let>
+<!--Functions-->
+	<function_body name="event_change" >
+		<op>"plc/m0.0"= 1</op>
+		<op>CHANGE.fieldtype = "edit"</op>
+	</function_body>
