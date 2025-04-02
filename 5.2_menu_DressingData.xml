@@ -124,7 +124,8 @@
                     <caption alignment= "left">Skip count</caption>
                 </control>
 
-                <control name="Skip_Value1" xpos="410" ypos="10" width="35" height="20" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly"  format="%9.2f" fontpixelsize = "12" color_bk = "#FFFFFF"/>
+                <control name="SC_Processed_qt" xpos="480" ypos="40" width="35" height="10" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly"  format="%9.2f" fontpixelsize = "12" color_bk = "#FFFFFF"/>
+                <control name="SC_Reprocessing_qt" xpos="480" ypos="60" width="35" height="10" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly"  format="%9.2f" fontpixelsize = "12" color_bk = "#FFFFFF"/>
 
         </init>
 
@@ -146,8 +147,8 @@
                     <text xpos = "178" ypos = "124" width="70" height="20" fontpixelsize = "7" color_bk = "#FFFFFF"> Dressing Travelse speed </text>
                     <text xpos = "249" ypos = "124" width="70" height="20" fontpixelsize = "7" color_bk = "#FFFFFF"> Dress Infeed amount </text>
                     <text xpos = "320" ypos = "124" width="70" height="20" fontpixelsize = "7" color_bk = "#FFFFFF"> Dress Infeed speed </text>
-                    <text xpos = "391" ypos = "124" width="70" height="20" fontpixelsize = "7" color_bk = "#FFFFFF"> Dressing offset %n   (Wheel offset) </text>
-                    <text xpos = "462" ypos = "124" width="70" height="20" fontpixelsize = "7" color_bk = "#FFFFFF"> Dressing times </text>
+                    <text xpos = "398" ypos = "124" width="70" height="20" fontpixelsize = "7" color_bk = "#FFFFFF"> Dressing offset %n   (Wheel offset) </text>
+                    <text xpos = "468" ypos = "124" width="70" height="20" fontpixelsize = "7" color_bk = "#FFFFFF"> Dressing times </text>
 
                 <!-- 2행 : Rough Dressing -->
                     <BOX xpos = "30" ypos = "140" width = "70" height = "19" color = "#FFFFFF" />
@@ -219,8 +220,8 @@
                     <text xpos = "178" ypos = "252" width="70" height="20" fontpixelsize = "7" color_bk = "#FFFFFF"> Dressing Travelse speed </text>
                     <text xpos = "249" ypos = "252" width="70" height="20" fontpixelsize = "7" color_bk = "#FFFFFF"> Dress Infeed amount </text>
                     <text xpos = "320" ypos = "252" width="70" height="20" fontpixelsize = "7" color_bk = "#FFFFFF"> Dress Infeed speed </text>
-                    <text xpos = "391" ypos = "252" width="70" height="20" fontpixelsize = "7" color_bk = "#FFFFFF"> Dressing offset %n   (Wheel offset) </text>
-                    <text xpos = "462" ypos = "252" width="70" height="20" fontpixelsize = "7" color_bk = "#FFFFFF"> Dressing times </text>
+                    <text xpos = "398" ypos = "252" width="70" height="20" fontpixelsize = "7" color_bk = "#FFFFFF"> Dressing offset %n   (Wheel offset) </text>
+                    <text xpos = "468" ypos = "252" width="70" height="20" fontpixelsize = "7" color_bk = "#FFFFFF"> Dressing times </text>
 
                    
                 <!-- 2행 : Rough Dressing-->
@@ -278,6 +279,13 @@
                     <text xpos = "440" ypos = "315" width="70" height="20" fontpixelsize = "7" color_bk = "#FFFFFF"> mm </text>
                     <text xpos = "511" ypos = "315" width="70" height="20" fontpixelsize = "7" color_bk = "#FFFFFF"> mm </text>
             <!-- Skip count -->
+                <text xpos = "280" ypos = "40" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> Dressing frequency processed quantity </text>
+                <text xpos = "280" ypos = "60" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> Dressing frequency per Reprocessing quantity </text>
+
+                <text xpos = "520" ypos = "40" width="70" height="20" fontpixelsize = "9" color_bk = "#FFFFFF"> pcs </text>
+                <text xpos = "520" ypos = "60" width="70" height="20" fontpixelsize = "9" color_bk = "#FFFFFF"> psc </text>
+
+
         </paint>
     </form>
 <!--Variables-->

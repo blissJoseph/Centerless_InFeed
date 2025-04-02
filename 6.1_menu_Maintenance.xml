@@ -95,9 +95,6 @@
 				<caption> CHANGE</caption>
 			</control>
 
-			<control name="CHANGE_00" xpos="350" ypos="250" width="50" height="30" fontpixelsize = "12" fieldtype="pushbutton" refvar="set_change_00" function = "handler_00">
-				<caption> CHANGE</caption>
-			</control>
 			
 
 
@@ -112,7 +109,6 @@
 			<text xpos = "120" ypos = "120" width="70" height="20" fontpixelsize = "12" color_bk = "#FFFFFF"> U2-Axis Refrance postion </text>
 			<text xpos = "120" ypos = "150" width="70" height="20" fontpixelsize = "12" color_bk = "#FFFFFF"> W2-Axis Refrance postion </text>
 
-			<text xpos = "120" ypos = "230" width="70" height="20" fontpixelsize = "12" color_bk = "#FFFFFF"> Z-Axis Refrance postion </text>
 
 
 		</paint>
